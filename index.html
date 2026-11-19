@@ -62,6 +62,73 @@ img{max-width:100%;display:block}
 .hero h1{margin:.6em 0 .2em;width:min(100%,540px)}
 .hero h1 img{width:100%;height:auto;filter:drop-shadow(0 18px 40px rgba(201,162,75,.18))}
 .hero h1 small{display:block;text-align:center;padding-left:.32em;font:600 clamp(1.1rem,2.4vw,1.55rem)/1.2 var(--f-mark);color:var(--gold-hi);margin-top:.9em;letter-spacing:.32em;text-transform:uppercase}
+/* story animation: 5 scenes, 16 s loop, each scene owns 20 % of the timeline */
+.story{margin:22px 0 0;width:min(100%,540px)}
+.story svg{display:block;width:100%;height:auto;overflow:visible}
+.story .ln{fill:none;stroke:var(--gold);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.story .fl{fill:var(--soot);stroke:var(--gold);stroke-width:2;stroke-linejoin:round}
+.story .fl.gold{fill:var(--gold)}
+.story .dot{fill:var(--gold-hi)}
+.story .whl{fill:var(--ink);stroke:var(--gold);stroke-width:2}
+.story .door{fill:var(--ink);stroke:var(--gold-hi);stroke-width:2}
+.story .road{stroke-dasharray:14 12;opacity:.55}
+.story .city .ln{opacity:.45}
+.story .trail{fill:none;stroke:var(--gold);stroke-width:1.5;stroke-dasharray:3 7;opacity:.5}
+.story .ink{fill:none;stroke:var(--gold-hi);stroke-width:3;stroke-linecap:round;stroke-dasharray:140;stroke-dashoffset:140}
+.story .check{fill:none;stroke:var(--gold-hi);stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:70;stroke-dashoffset:70}
+.story text{font-family:var(--f-body);fill:var(--bone)}
+.story .cap{font:500 11px var(--f-mono);letter-spacing:.14em;text-transform:uppercase;fill:var(--ash);text-anchor:middle}
+.story .msg{font-size:14px}
+.story .msg.dark{fill:var(--ink);font-weight:700}
+.story .mono{font:500 11px var(--f-mono);fill:var(--gold-hi);text-anchor:middle}
+.story .mono-big{font:600 34px var(--f-mark);fill:var(--gold-hi);text-anchor:middle}
+.story .vantext{font:600 10px var(--f-mark);letter-spacing:.16em;fill:var(--gold-hi);text-anchor:middle}
+.story .sc,.story .pop,.story .env,.story .b1,.story .b2,.story .cal,.story .drive,.story .wheel,.story .door,.story .walker,.story .machine{transform-box:fill-box;animation-duration:16s;animation-iteration-count:infinite;animation-timing-function:ease-in-out}
+.story .sc{opacity:0}
+.sc1{animation-name:s1}.sc2{animation-name:s2}.sc3{animation-name:s3}.sc4{animation-name:s4}.sc5{animation-name:s5}
+@keyframes s1{0%{opacity:0}2%,18%{opacity:1}20%,100%{opacity:0}}
+@keyframes s2{0%,20%{opacity:0}22%,38%{opacity:1}40%,100%{opacity:0}}
+@keyframes s3{0%,40%{opacity:0}42%,58%{opacity:1}60%,100%{opacity:0}}
+@keyframes s4{0%,60%{opacity:0}62%,78%{opacity:1}80%,100%{opacity:0}}
+@keyframes s5{0%,80%{opacity:0}82%,98%{opacity:1}100%{opacity:0}}
+.story .pop{transform-origin:center;animation-name:pop}
+@keyframes pop{0%,3%{transform:scale(0)}5%,100%{transform:scale(1)}}
+.story .env{animation-name:fly}
+@keyframes fly{0%,6%{transform:translate(0,0);opacity:0}7%{opacity:1}11%{transform:translate(140px,-46px)}15%{transform:translate(285px,8px);opacity:1}17%,100%{transform:translate(285px,8px);opacity:0}}
+.story .b1{animation-name:b1}.story .b2{animation-name:b2}.story .cal{animation-name:cal}
+@keyframes b1{0%,22%{opacity:0;transform:translateY(8px)}24%,100%{opacity:1;transform:none}}
+@keyframes b2{0%,27%{opacity:0;transform:translateY(8px)}29%,100%{opacity:1;transform:none}}
+@keyframes cal{0%,32%{opacity:0;transform:scale(.8)}34%,100%{opacity:1;transform:none}}
+.story .drive{animation-name:drive}
+@keyframes drive{0%,41%{transform:translateX(-400px)}55%,100%{transform:translateX(0)}}
+.story .wheel{transform-origin:center;animation-name:roll}
+@keyframes roll{0%,41%{transform:rotate(0)}55%,100%{transform:rotate(1080deg)}}
+.story .door{transform-origin:left center;animation-name:door}
+@keyframes door{0%,63%{transform:none}65%,100%{transform:scaleX(.15)}}
+.story .walker{animation-name:walk}
+@keyframes walk{0%,64%{transform:translateX(0);opacity:1}73%{transform:translateX(-104px);opacity:1}75%,100%{transform:translateX(-104px);opacity:0}}
+.story .machine{animation-name:buzz}
+@keyframes buzz{0%,82%{transform:translate(-110px,0)}88%{transform:translate(-40px,-2px)}89%{transform:translate(-40px,1px)}90%,100%{transform:translate(0,0)}}
+.story .ink{animation:ink 16s infinite ease-in-out}
+@keyframes ink{0%,83%{stroke-dashoffset:140}90%,100%{stroke-dashoffset:0}}
+.story .check{animation:check 16s infinite ease-out}
+@keyframes check{0%,90%{stroke-dashoffset:70}94%,100%{stroke-dashoffset:0}}
+.steps-mini{list-style:none;margin:10px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:4px;border-top:1px solid var(--line)}
+.steps-mini li{position:relative;padding-top:8px;text-align:center;font:500 .66rem/1.2 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;min-width:0}
+.steps-mini span{color:var(--ash)}
+.steps-mini b{position:absolute;left:0;right:0;top:8px;font-weight:500;color:var(--gold-hi);opacity:0;animation:16s infinite}
+.steps-mini li::before{content:"";position:absolute;left:12%;right:12%;top:-1px;height:2px;background:var(--gold-hi);opacity:0;animation:inherit}
+.steps-mini li:nth-child(1) b,.steps-mini li:nth-child(1)::before{animation:s1 16s infinite}
+.steps-mini li:nth-child(2) b,.steps-mini li:nth-child(2)::before{animation:s2 16s infinite}
+.steps-mini li:nth-child(3) b,.steps-mini li:nth-child(3)::before{animation:s3 16s infinite}
+.steps-mini li:nth-child(4) b,.steps-mini li:nth-child(4)::before{animation:s4 16s infinite}
+.steps-mini li:nth-child(5) b,.steps-mini li:nth-child(5)::before{animation:s5 16s infinite}
+@media (max-width:420px){.steps-mini li{font-size:.56rem;letter-spacing:.04em}}
+@media (prefers-reduced-motion:reduce){
+  .story .sc{opacity:0}.story .sc3{opacity:1}
+  .story .drive{transform:none}
+  .steps-mini b{opacity:1}
+}
 .hero p.lead{max-width:34em;color:var(--ash);font-size:1.06rem;margin:1.3em 0 2em}
 .btns{display:flex;gap:12px;flex-wrap:wrap}
 .btn{display:inline-flex;align-items:center;gap:10px;font:500 .82rem/1 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding:16px 22px;border-radius:2px;border:1px solid var(--gold);transition:background .2s,color .2s}
@@ -201,6 +268,67 @@ footer a{color:var(--ash)}
       <div class="hero-copy">
         <div class="eyebrow">Mobiles Tattoo-Studio · Est. 2013</div>
         <h1><img src="img/logo.webp" alt="Tattoo Hope, since 2013" width="2000" height="1594"><small>on the Road</small></h1>
+        <figure class="story" aria-label="So läuft es ab: Du schickst eine Anfrage, wir sprechen alles ab, das Tattoo-Mobil kommt in deine Stadt, du steigst ein, es wird tätowiert, fertig.">
+          <svg viewBox="0 0 540 200" role="img" aria-hidden="true">
+            <!-- 1 Anfrage -->
+            <g class="sc sc1">
+              <rect x="60" y="38" width="72" height="124" rx="13" class="ln"/>
+              <line x1="86" y1="50" x2="106" y2="50" class="ln"/>
+              <g class="pop"><rect x="70" y="70" width="52" height="26" rx="9" class="fl"/><circle cx="84" cy="83" r="2.6" class="dot"/><circle cx="96" cy="83" r="2.6" class="dot"/><circle cx="108" cy="83" r="2.6" class="dot"/></g>
+              <text x="96" y="182" class="cap">Du</text>
+              <path d="M150 100 Q 290 20 400 95" class="trail"/>
+              <g class="env"><g transform="translate(120 72)"><rect width="38" height="26" rx="3" class="fl"/><polyline points="0,2 19,15 38,2" class="ln"/></g></g>
+              <circle cx="445" cy="98" r="40" class="ln"/>
+              <text x="445" y="111" class="mono-big">Ü</text>
+              <text x="445" y="182" class="cap">Ümit</text>
+            </g>
+            <!-- 2 Absprache -->
+            <g class="sc sc2">
+              <g class="b1"><rect x="40" y="30" width="230" height="36" rx="16" class="fl"/><text x="58" y="53" class="msg">Löwe auf dem Unterarm?</text></g>
+              <g class="b2"><rect x="270" y="78" width="230" height="36" rx="16" class="fl gold"/><text x="288" y="101" class="msg dark">Gern! Samstag, 11 Uhr?</text></g>
+              <g class="cal"><rect x="228" y="128" width="84" height="62" rx="8" class="ln"/><rect x="228" y="128" width="84" height="16" rx="8" class="fl gold"/><text x="270" y="172" class="mono">SA · 11:00</text><path d="M300 176 l6 6 l12 -14" class="ln tick"/></g>
+            </g>
+            <!-- 3 Anfahrt -->
+            <g class="sc sc3">
+              <g class="city"><polyline points="0,150 30,150 30,96 64,96 64,150 80,150 80,74 112,74 112,150 128,150 128,110 168,110 168,150 360,150 360,104 388,104 388,82 410,82 410,150 430,150 430,62 470,62 470,150 488,150 488,118 540,118" class="ln"/></g>
+              <line x1="0" y1="174" x2="540" y2="174" class="ln road"/>
+              <g class="drive"><g class="van" transform="translate(170 0)"><use href="#van"/></g></g>
+            </g>
+            <!-- 4 Einsteigen -->
+            <g class="sc sc4">
+              <g transform="translate(170 0)"><use href="#van"/><rect x="118" y="112" width="22" height="46" class="door"/></g>
+              <g class="walker"><g transform="translate(400 0)"><circle cx="0" cy="104" r="9" class="ln"/><line x1="0" y1="113" x2="0" y2="142" class="ln"/><polyline points="-11,128 0,120 11,128" class="ln"/><polyline points="-9,166 0,142 9,166" class="ln"/></g></g>
+            </g>
+            <!-- 5 Tätowieren, fertig -->
+            <g class="sc sc5">
+              <rect x="40" y="104" width="300" height="50" rx="25" class="ln"/>
+              <path d="M150 129 c 10 -18 30 -18 36 0 c 6 18 26 18 36 0 c 10 -18 30 -18 36 0" class="ink"/>
+              <g class="machine"><g transform="translate(262 52) rotate(28)"><rect x="-7" y="0" width="14" height="52" rx="5" class="fl gold"/><line x1="0" y1="52" x2="0" y2="66" class="ln"/><rect x="-11" y="10" width="22" height="9" rx="3" class="ln"/></g></g>
+              <circle cx="452" cy="104" r="40" class="ln"/>
+              <path d="M432 105 l14 14 l28 -30" class="check"/>
+              <text x="452" y="182" class="cap">Fertig</text>
+            </g>
+            <defs>
+              <g id="van">
+                <rect x="10" y="104" width="160" height="58" rx="9" class="fl"/>
+                <path d="M170 116 h22 l18 20 v26 h-40 z" class="fl"/>
+                <rect x="176" y="121" width="16" height="15" rx="2" class="ln"/>
+                <rect x="26" y="114" width="34" height="18" rx="3" class="ln"/>
+                <rect x="70" y="114" width="34" height="18" rx="3" class="ln"/>
+                <text x="66" y="151" class="vantext">TATTOO HOPE</text>
+                <g class="wheel"><circle cx="48" cy="164" r="12" class="whl"/><line x1="36" y1="164" x2="60" y2="164" class="ln"/></g>
+                <g class="wheel"><circle cx="172" cy="164" r="12" class="whl"/><line x1="160" y1="164" x2="184" y2="164" class="ln"/></g>
+              </g>
+            </defs>
+          </svg>
+          <ol class="steps-mini">
+            <li><span>Anfrage</span><b>Anfrage</b></li>
+            <li><span>Absprache</span><b>Absprache</b></li>
+            <li><span>Anfahrt</span><b>Anfahrt</b></li>
+            <li><span>Einsteigen</span><b>Einsteigen</b></li>
+            <li><span>Fertig</span><b>Fertig</b></li>
+          </ol>
+        </figure>
         <p class="lead">Ümit tätowiert seit 2013. Heute fährt das Studio mit: ein umgebautes Wohnmobil, das deutschlandweit unterwegs ist. Black &amp; Grey, Realistik, Coverups und Fine Line, als Unikat für dich gezeichnet.</p>
         <div class="btns">
           <a class="btn solid" href="https://www.instagram.com/tattoohope/" target="_blank" rel="noopener">Termin per Instagram</a>
