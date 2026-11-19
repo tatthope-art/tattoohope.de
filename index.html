@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Tattoo Hope · Mobiles Tattoo-Studio seit 2013</title>
+<meta name="description" content="Tattoo Hope on the Road: Ümits mobiles Tattoo-Studio im Wohnmobil, deutschlandweit unterwegs und in Wuppertal. Black &amp; Grey, Realistik, Coverups, Fine Line.">
+<meta property="og:title" content="Tattoo Hope on the Road">
+<meta property="og:description" content="Mobiles Tattoo-Studio seit 2013. Deutschlandweit auf Tour.">
+<meta property="og:image" content="https://tattoohope.de/img/tattoomobil.jpg">
+<meta property="og:url" content="https://tattoohope.de/">
+<meta name="theme-color" content="#0b0a08">
+<link rel="icon" href="img/logo.webp" type="image/webp">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}</style>
+<style>
+/* Layout: one dark gallery wall. Gold only on lines, labels and the wordmark; the tattoos carry the colour. */
+:root{
+  --ink:#0b0a08;          /* page black */
+  --soot:#14120e;         /* raised surface */
+  --gold:#c9a24b;         /* main gold */
+  --gold-hi:#ecd28a;      /* highlight gold */
+  --bone:#ece6d8;         /* text */
+  --ash:#9d958a;          /* muted text */
+  --line:rgba(201,162,75,.28);
+  --f-mark:"Cinzel","Trajan Pro",Georgia,serif;
+  --f-head:"Cormorant Garamond","Cormorant",Georgia,serif;
+  --f-body:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"DM Mono",ui-monospace,Consolas,monospace;
+  --wrap:1180px;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--ink);color:var(--bone);font:400 16px/1.65 var(--f-body);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--ink)}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+:focus-visible{outline:2px solid var(--gold-hi);outline-offset:3px}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(11,10,8,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:10px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{width:62px;height:auto}
+.brand span{font:600 1.15rem/1 var(--f-mark);color:var(--gold-hi);letter-spacing:.12em;text-transform:uppercase}
+@media (max-width:420px){.brand span{display:none}}
+.nav{display:flex;gap:22px;flex-wrap:wrap}
+.nav a{font:500 .78rem/1 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--ash);padding-block:8px}
+.nav a:hover{color:var(--gold-hi)}
+@media (max-width:760px){.nav{display:none}}
+.top .cta-sm{font:500 .78rem/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--ink);background:var(--gold);padding:11px 14px;border-radius:2px;white-space:nowrap}
+.top .cta-sm:hover{background:var(--gold-hi)}
+
+/* hero */
+.hero{position:relative;border-bottom:1px solid var(--line);overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding-block:72px 64px}
+.hero-copy{min-width:0}
+.eyebrow{font:500 .76rem/1.4 var(--f-mono);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.hero h1{margin:.6em 0 .2em;width:min(100%,540px)}
+.hero h1 img{width:100%;height:auto;filter:drop-shadow(0 18px 40px rgba(201,162,75,.18))}
+.hero h1 small{display:block;text-align:center;padding-left:.32em;font:600 clamp(1.1rem,2.4vw,1.55rem)/1.2 var(--f-mark);color:var(--gold-hi);margin-top:.9em;letter-spacing:.32em;text-transform:uppercase}
+.hero p.lead{max-width:34em;color:var(--ash);font-size:1.06rem;margin:1.3em 0 2em}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;font:500 .82rem/1 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding:16px 22px;border-radius:2px;border:1px solid var(--gold);transition:background .2s,color .2s}
+.btn.solid{background:var(--gold);color:var(--ink)}
+.btn.solid:hover{background:var(--gold-hi);border-color:var(--gold-hi)}
+.btn.ghost{color:var(--gold-hi)}
+.btn.ghost:hover{background:rgba(201,162,75,.12)}
+.hero-pic{position:relative;min-width:0}
+.hero-pic .frame{position:relative;border:1px solid var(--gold);padding:10px}
+.hero-pic .frame::after{content:"";position:absolute;inset:-14px 14px 14px -14px;border:1px solid var(--line);z-index:-1}
+.hero-pic img{width:100%;aspect-ratio:1/1;object-fit:cover;filter:saturate(.9) contrast(1.05)}
+.hero-pic figcaption{margin-top:12px;font:400 .74rem/1.4 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ash);display:flex;justify-content:space-between;gap:12px}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr;padding-block:44px 48px;gap:36px}}
+
+/* fact strip */
+.facts{border-bottom:1px solid var(--line);background:var(--soot)}
+.facts .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.fact{padding:22px 18px;border-left:1px solid var(--line);min-width:0}
+.fact:first-child{border-left:0;padding-left:0}
+a.fact{text-decoration:none;transition:background .2s}
+a.fact:hover{background:rgba(201,162,75,.08)}
+a.fact:hover span{color:var(--gold-hi)}
+.fact b{display:block;font:600 1.7rem/1.1 var(--f-head);color:var(--gold-hi);font-variant-numeric:tabular-nums}
+.fact span{font:400 .74rem/1.4 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ash)}
+@media (max-width:760px){.facts .wrap{grid-template-columns:1fr 1fr}.fact:nth-child(3){border-left:0;padding-left:0}.fact{border-top:1px solid var(--line)}.fact:nth-child(-n+2){border-top:0}}
+
+/* sections */
+section{padding-block:88px}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:40px;border-bottom:1px solid var(--line);padding-bottom:18px}
+.sec-head h2{margin:0;font:600 clamp(1.8rem,4vw,2.8rem)/1.1 var(--f-mark);color:var(--gold-hi);letter-spacing:.06em;text-wrap:balance}
+.sec-head p{margin:0;max-width:30em;color:var(--ash)}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.work{position:relative;margin:0;background:var(--soot);border:0;padding:0;cursor:zoom-in;overflow:hidden;color:inherit;text-align:left}
+.work img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 35%;transition:transform .5s ease,filter .5s ease;filter:grayscale(.15)}
+.work:hover img,.work:focus-visible img{transform:scale(1.04);filter:none}
+.work .cap{position:absolute;left:0;right:0;bottom:0;padding:40px 14px 12px;background:linear-gradient(transparent,rgba(11,10,8,.92));display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.work .cap b{font:600 1.2rem/1.1 var(--f-head);color:var(--bone)}
+.work .cap i{font:normal 400 .7rem/1 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.work.wide{grid-column:span 2}
+.work.wide img{aspect-ratio:8/5}
+@media (max-width:860px){.gallery{grid-template-columns:1fr 1fr}.work.wide{grid-column:span 2}}
+@media (max-width:480px){.gallery{grid-template-columns:1fr}.work.wide{grid-column:auto}.work.wide img{aspect-ratio:4/5}}
+.styles{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.styles span{font:400 .74rem/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line);color:var(--gold-hi);padding:9px 12px;border-radius:2px}
+
+/* road */
+.road{background:var(--soot);border-block:1px solid var(--line)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.split > *{min-width:0}
+.split img{width:100%;aspect-ratio:4/5;object-fit:cover;border:1px solid var(--gold);padding:8px;background:var(--ink)}
+.split h3{font:500 clamp(1.7rem,3.2vw,2.4rem)/1.15 var(--f-head);margin:.3em 0 .6em;text-wrap:balance}
+.split p{color:var(--ash);max-width:34em}
+.stops{list-style:none;padding:0;margin:28px 0 0;display:flex;flex-wrap:wrap;gap:6px 0;font:400 .8rem/1.6 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--bone)}
+.stops li:not(:last-child)::after{content:"·";color:var(--gold);margin:0 .7em}
+.note{margin-top:22px;font:400 .82rem/1.5 var(--f-mono);color:var(--gold);letter-spacing:.04em}
+@media (max-width:860px){.split{grid-template-columns:1fr;gap:32px}.split.rev img{order:-1}}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line)}
+.step{padding:26px 22px 8px 0;border-right:1px solid var(--line);min-width:0}
+.step + .step{padding-left:22px}
+.step:last-child{border-right:0}
+.step .n{font:600 2.2rem/1 var(--f-mark);color:var(--gold)}
+.step h4{font:600 1.3rem/1.2 var(--f-head);margin:.5em 0 .3em}
+.step p{color:var(--ash);margin:0;font-size:.95rem}
+@media (max-width:860px){.steps{grid-template-columns:1fr 1fr}.step:nth-child(2){border-right:0}.step:nth-child(3){padding-left:0}.step:nth-child(n+3){border-top:1px solid var(--line)}}
+@media (max-width:480px){.steps{grid-template-columns:1fr}.step,.step + .step{padding-left:0;border-right:0}.step + .step{border-top:1px solid var(--line)}}
+
+/* contact */
+.contact{text-align:left}
+.contact .box{border:1px solid var(--gold);padding:clamp(28px,5vw,56px);display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;position:relative}
+.contact .box > *{min-width:0}
+.contact h2{margin:0 0 .4em;font:600 clamp(1.9rem,4.5vw,3rem)/1.1 var(--f-mark);color:var(--gold-hi);letter-spacing:.06em}
+.contact p{color:var(--ash);max-width:32em}
+.links{display:grid;gap:10px}
+.links a{display:flex;justify-content:space-between;align-items:center;gap:12px;text-decoration:none;border-bottom:1px solid var(--line);padding:14px 0;font:500 1.05rem/1.2 var(--f-body)}
+.links a small{font:400 .72rem/1 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.links a:hover{color:var(--gold-hi)}
+@media (max-width:760px){.contact .box{grid-template-columns:1fr}}
+
+.legal{border-top:1px solid var(--line);padding-block:64px;background:var(--soot)}
+.legal + .legal{background:var(--ink)}
+.legal h2{margin:0 0 28px;font:600 clamp(1.5rem,3vw,2rem)/1.1 var(--f-mark);color:var(--gold-hi);letter-spacing:.06em}
+.legal-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px 56px}
+.legal-grid > div{min-width:0}
+.legal h3{margin:22px 0 6px;font:500 .74rem/1.4 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.legal-grid > div > h3:first-child{margin-top:0}
+.legal p{margin:0;color:var(--ash);font-size:.93rem;max-width:40em;overflow-wrap:anywhere}
+.legal .sel{color:var(--bone);user-select:all}
+.legal .todo{color:var(--gold-hi);background:rgba(201,162,75,.12);padding:0 4px}
+.legal .stand{margin-top:22px;font:400 .74rem/1.4 var(--f-mono);letter-spacing:.1em}
+@media (max-width:760px){.legal-grid{grid-template-columns:1fr}.legal-grid > div + div > h3:first-child{margin-top:22px}}
+footer{border-top:1px solid var(--line);padding-block:28px 40px;color:var(--ash);font:400 .78rem/1.6 var(--f-mono);letter-spacing:.06em}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer a{color:var(--ash)}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:50;background:rgba(5,5,4,.95);display:grid;place-items:center;padding:max(20px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(20px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.lb figure{margin:0;display:grid;gap:12px;justify-items:center;max-height:100%}
+.lb img{max-height:82vh;width:auto;border:1px solid var(--gold)}
+.lb figcaption{font:600 1.2rem/1.2 var(--f-head);color:var(--bone)}
+.lb button{position:absolute;background:none;border:1px solid var(--line);color:var(--gold-hi);font:400 1.4rem/1 var(--f-body);width:48px;height:48px;cursor:pointer;border-radius:2px}
+.lb button:hover{background:rgba(201,162,75,.15)}
+.lb .x{top:max(16px,env(safe-area-inset-top,0px));right:max(16px,env(safe-area-inset-right,0px))}
+.lb .prev{left:max(16px,env(safe-area-inset-left,0px));top:50%}
+.lb .next{right:max(16px,env(safe-area-inset-right,0px));top:50%}
+.draft{background:var(--gold);color:var(--ink);text-align:center;font:500 .72rem/1.4 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;padding:7px max(16px,env(safe-area-inset-right,0px)) 7px max(16px,env(safe-area-inset-left,0px))}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#start" aria-label="Tattoo Hope, zum Anfang">
+      <img src="img/logo.webp" alt="" width="62" height="49">
+      <span>Tattoo Hope</span>
+    </a>
+    <nav class="nav" aria-label="Hauptmenü">
+      <a href="#arbeiten">Arbeiten</a>
+      <a href="#tattoo-mobil">Tattoo-Mobil</a>
+      <a href="#ablauf">Ablauf</a>
+      <a href="#termin">Kontakt</a>
+    </nav>
+    <a class="cta-sm" href="https://www.instagram.com/tattoohope/" target="_blank" rel="noopener">Termin anfragen</a>
+  </div>
+</header>
+
+<main id="start">
+  <section class="hero" style="padding:0">
+    <div class="wrap">
+      <div class="hero-copy">
+        <div class="eyebrow">Mobiles Tattoo-Studio · Est. 2013</div>
+        <h1><img src="img/logo.webp" alt="Tattoo Hope, since 2013" width="2000" height="1594"><small>on the Road</small></h1>
+        <p class="lead">Ümit tätowiert seit 2013. Heute fährt das Studio mit: ein umgebautes Wohnmobil, das deutschlandweit unterwegs ist. Black &amp; Grey, Realistik, Coverups und Fine Line, als Unikat für dich gezeichnet.</p>
+        <div class="btns">
+          <a class="btn solid" href="https://www.instagram.com/tattoohope/" target="_blank" rel="noopener">Termin per Instagram</a>
+          <a class="btn ghost" href="https://www.tiktok.com/@tattoohope" target="_blank" rel="noopener">TikTok</a>
+          <a class="btn ghost" href="#arbeiten">Arbeiten ansehen</a>
+        </div>
+      </div>
+      <figure class="hero-pic">
+        <div class="frame"><img src="img/tattoomobil.jpg" alt="Das Tattoo-Mobil von Tattoo Hope bei Sonnenuntergang auf einem Stellplatz"></div>
+        <figcaption><span>Das Studio auf Rädern</span><span>Spot: siehe Stories</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="facts">
+    <div class="wrap">
+      <div class="fact"><b>2013</b><span>Tätowiert seit</span></div>
+      <a class="fact" href="https://www.instagram.com/tattoohope/" target="_blank" rel="noopener"><b>14.600</b><span>Follower auf Instagram ↗</span></a>
+      <a class="fact" href="https://www.tiktok.com/@tattoohope" target="_blank" rel="noopener"><b>26.800</b><span>Follower auf TikTok ↗</span></a>
+      <div class="fact"><b>Deutschlandweit</b><span>Auf Tour</span></div>
+    </div>
+  </div>
+
+  <section id="arbeiten">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Arbeiten</h2>
+        <p>Eine Auswahl aus den letzten Monaten. Antippen zum Vergrößern. Mehr gibt es täglich auf Instagram.</p>
+      </div>
+      <div class="gallery" id="gallery">
+        <button class="work wide" data-i="0"><img src="img/loewe.jpg" alt="Großer realistischer Löwenkopf auf dem Oberarm" loading="lazy"><div class="cap"><b>Löwenkopf</b><i>Realistik</i></div></button>
+        <button class="work" data-i="1"><img src="img/engel.jpg" alt="Drei Putten-Engel, Black and Grey, auf dem Oberarm" loading="lazy"><div class="cap"><b>Engel</b><i>Black &amp; Grey</i></div></button>
+        <button class="work" data-i="2"><img src="img/adler_coverup.jpg" alt="Adler-Tattoo als Coverup auf dem Unterarm" loading="lazy"><div class="cap"><b>Adler</b><i>Coverup</i></div></button>
+        <button class="work" data-i="3"><img src="img/blumen_sleeve.jpg" alt="Blumen-Sleeve mit Rosen und Mandala auf dem Unterarm" loading="lazy"><div class="cap"><b>Blumen-Sleeve</b><i>Floral</i></div></button>
+        <button class="work" data-i="4"><img src="img/loewe_unterarm.jpg" alt="Löwe auf dem Unterarm" loading="lazy"><div class="cap"><b>Löwe</b><i>Unterarm</i></div></button>
+        <button class="work" data-i="5"><img src="img/adler_uhr.jpg" alt="Adler mit Taschenuhr am Oberarm" loading="lazy"><div class="cap"><b>Adler &amp; Uhr</b><i>Oberarm</i></div></button>
+        <button class="work" data-i="6"><img src="img/blumen_arm.jpg" alt="Blumen-Tattoo am Unterarm" loading="lazy"><div class="cap"><b>Blüten</b><i>Floral</i></div></button>
+        <button class="work" data-i="7"><img src="img/feine_blumen.jpg" alt="Feine Blumenranke auf dem Rücken" loading="lazy"><div class="cap"><b>Blumenranke</b><i>Fine Line</i></div></button>
+        <button class="work wide" data-i="8"><img src="img/portrait.jpg" alt="Portrait-Tattoo nach einem Foto, daneben die Vorlage" loading="lazy" style="object-position:center 30%"><div class="cap"><b>Portrait nach Foto</b><i>Realistik</i></div></button>
+      </div>
+      <div class="styles" aria-label="Stilrichtungen">
+        <span>Black &amp; Grey</span><span>Realistik</span><span>Portraits</span><span>Coverups</span><span>Floral</span><span>Fine Line</span><span>Custom Designs</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="road" id="tattoo-mobil">
+    <div class="wrap split">
+      <img src="img/tattoomobil.jpg" alt="Wohnmobil mit Tattoo-Hope-Schriftzug, davor Tisch und Pflanzen" loading="lazy" style="object-position:30% center">
+      <div>
+        <div class="eyebrow">Das Tattoo-Mobil</div>
+        <h3>Ein Studio, das zu dir kommt</h3>
+        <p>Ümit hat ein Wohnmobil selbst zum Tattoo-Studio umgebaut, mit eigener Liege und allem, was ein sauberes Studio braucht. Damit ist Tattoo Hope deutschlandweit unterwegs und bleibt immer ein paar Tage an einem Ort.</p>
+        <p>Wo das Mobil gerade steht und wann es freie Termine gibt, steht jeden Tag in den Instagram-Stories.</p>
+        <ul class="stops" aria-label="Bisherige Stationen">
+          <li>Wuppertal</li><li>Hamburg</li><li>Magdeburg</li><li>Darmstadt</li><li>Mannheim</li><li>Würzburg</li><li>Stuttgart</li><li>Bayern</li>
+        </ul>
+        <p class="note">Aktueller Spot: Instagram-Stories @tattoohope</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="ueber">
+    <div class="wrap split rev">
+      <div>
+        <div class="eyebrow">Der Artist</div>
+        <h3>Ümit, Tattoo Hope</h3>
+        <p>Seit 2013 steht Tattoo Hope für Tattoos, die halten, was sie versprechen. Ümit arbeitet am liebsten in Black &amp; Grey, mit Portraits, Tieren, Engeln und Blumen, und rettet alte Tattoos mit durchdachten Coverups.</p>
+        <p>Jedes Motiv wird für dich gezeichnet. Kein Fließband, sondern ein Termin mit Zeit, auch wenn das Studio auf Rädern steht.</p>
+      </div>
+      <img src="img/bei_der_arbeit.jpg" alt="Ümit beim Tätowieren im Studio" loading="lazy">
+    </div>
+  </section>
+
+  <section id="ablauf" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>So kommst du zu deinem Tattoo</h2>
+      </div>
+      <div class="steps">
+        <div class="step"><div class="n">1</div><h4>Anfrage</h4><p>Schick eine Nachricht auf Instagram: Motiv-Idee, Körperstelle, ungefähre Größe und gern Beispielbilder.</p></div>
+        <div class="step"><div class="n">2</div><h4>Entwurf</h4><p>Ümit zeichnet dein Motiv und spricht Größe, Platzierung und Preis mit dir ab.</p></div>
+        <div class="step"><div class="n">3</div><h4>Termin</h4><p>Im Tattoo-Mobil an einem Spot in deiner Nähe oder in Wuppertal.</p></div>
+        <div class="step"><div class="n">4</div><h4>Pflege</h4><p>Du bekommst eine Anleitung für die Heilung und kannst jederzeit Fragen schicken.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="termin" style="padding-top:0">
+    <div class="wrap">
+      <div class="box">
+        <div>
+          <h2>Termin anfragen</h2>
+          <p>Am schnellsten erreichst du Ümit per Direktnachricht auf Instagram. Dort stehen auch die freien Termine und der aktuelle Standort.</p>
+          <div class="btns" style="margin-top:24px"><a class="btn solid" href="https://www.instagram.com/tattoohope/" target="_blank" rel="noopener">Nachricht schreiben</a></div>
+        </div>
+        <div class="links">
+          <a href="https://www.instagram.com/tattoohope/" target="_blank" rel="noopener"><span>@tattoohope · 14.600 Follower</span><small>Instagram</small></a>
+          <a href="https://www.tiktok.com/@tattoohope" target="_blank" rel="noopener"><span>@tattoohope · 26.800 Follower</span><small>TikTok</small></a>
+          <a href="https://www.google.com/maps/search/Tattoo+Hope+Wuppertal" target="_blank" rel="noopener"><span>Tattoo Hope Wuppertal</span><small>Google Maps</small></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="legal" id="impressum">
+    <div class="wrap">
+      <h2>Impressum</h2>
+      <div class="legal-grid">
+        <div>
+          <h3>Angaben gemäß § 5 DDG</h3>
+          <p>Ümit Babayigit<br>Tattoo Hope<br>Buchenstr. 12<br>42283 Wuppertal<br>Deutschland</p>
+          <h3>Kontakt</h3>
+          <p>Telefon: <span class="sel">0178 5776262</span><br>E-Mail: <span class="sel">tatthope@gmail.com</span></p>
+          <h3>Umsatzsteuer</h3>
+          <p>Kleinunternehmer im Sinne von § 19 UStG. Es wird keine Umsatzsteuer ausgewiesen, eine Umsatzsteuer-Identifikationsnummer ist nicht vorhanden.</p>
+        </div>
+        <div>
+          <h3>Verbraucherstreitbeilegung</h3>
+          <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+          <h3>Haftung für Links</h3>
+          <p>Diese Seite enthält Links zu Instagram, TikTok und Google Maps. Für deren Inhalte sind ausschließlich die jeweiligen Anbieter verantwortlich. Zum Zeitpunkt der Verlinkung waren keine Rechtsverstöße erkennbar.</p>
+          <h3>Bildrechte</h3>
+          <p>Alle Fotos und das Logo: © Tattoo Hope, Ümit Babayigit. Verwendung nur mit Erlaubnis.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="legal" id="datenschutz">
+    <div class="wrap">
+      <h2>Datenschutzerklärung</h2>
+      <div class="legal-grid">
+        <div>
+          <h3>1. Verantwortlicher</h3>
+          <p>Ümit Babayigit, Tattoo Hope, Buchenstr. 12, 42283 Wuppertal<br>Telefon: 0178 5776262 · E-Mail: tatthope@gmail.com</p>
+          <h3>2. Hosting und Server-Logfiles</h3>
+          <p>Diese Website wird über GitHub Pages bereitgestellt, einen Dienst der GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. Beim Aufruf der Seite verarbeitet GitHub automatisch technische Daten, die dein Browser übermittelt, insbesondere deine IP-Adresse, Datum und Uhrzeit, die aufgerufene Seite sowie Browser und Betriebssystem. GitHub nutzt diese Daten, um die Seite auszuliefern und vor Angriffen zu schützen, und speichert sie nach eigenen Angaben nur so lange, wie es dafür nötig ist. Rechtsgrundlage ist unser berechtigtes Interesse an einem stabilen und sicheren Betrieb der Website (Art. 6 Abs. 1 lit. f DSGVO).</p>
+          <p style="margin-top:10px">Dabei können Daten in die USA übertragen werden. GitHub ist unter dem EU-US Data Privacy Framework zertifiziert, für das die EU-Kommission ein angemessenes Datenschutzniveau festgestellt hat (Art. 45 DSGVO). Mehr dazu in der Datenschutzerklärung von GitHub: docs.github.com/site-policy/privacy-policies/github-general-privacy-statement</p>
+          <h3>3. Keine Cookies, kein Tracking</h3>
+          <p>Diese Website setzt keine Cookies und nutzt keine Analyse- oder Werbedienste.</p>
+          <h3>4. Schriftarten</h3>
+          <p>Die Schriftarten sind lokal auf dem Server dieser Website gespeichert. Beim Laden der Seite wird keine Verbindung zu Google oder anderen Schrift-Anbietern aufgebaut.</p>
+        </div>
+        <div>
+          <h3>5. Kontakt per E-Mail, Telefon oder Instagram</h3>
+          <p>Wenn du uns kontaktierst, verarbeiten wir deine Angaben (zum Beispiel Name, Nachricht, Motivwunsch, Fotos), um deine Anfrage zu beantworten und deinen Termin vorzubereiten (Art. 6 Abs. 1 lit. b DSGVO). Wir löschen die Daten, wenn sie dafür nicht mehr gebraucht werden und keine gesetzlichen Aufbewahrungsfristen bestehen. Bei Nachrichten über Instagram oder TikTok gelten zusätzlich die Datenschutzbestimmungen von Meta beziehungsweise TikTok.</p>
+          <h3>6. Links zu Instagram, TikTok und Google Maps</h3>
+          <p>Auf dieser Seite sind Instagram, TikTok und Google Maps nur verlinkt, nicht eingebettet. Es werden erst Daten an diese Anbieter übertragen, wenn du einen Link anklickst. Danach gelten deren Datenschutzbestimmungen.</p>
+          <h3>7. Deine Rechte</h3>
+          <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch (Art. 15 bis 21 DSGVO). Schreib dazu einfach an die oben genannte E-Mail-Adresse. Außerdem kannst du dich bei einer Datenschutz-Aufsichtsbehörde beschweren (Art. 77 DSGVO), zum Beispiel bei der für uns zuständigen Landesbeauftragten für Datenschutz und Informationsfreiheit Nordrhein-Westfalen, Kavalleriestraße 2–4, 40213 Düsseldorf.</p>
+          <h3>8. Fotos von Kundinnen und Kunden</h3>
+          <p>Auf dieser Seite zeigen wir Fotos unserer Arbeiten. Wenn du auf einem Foto zu erkennen bist oder dein Tattoo nicht gezeigt werden soll, schreib uns an die oben genannte E-Mail-Adresse. Wir nehmen das Foto dann umgehend herunter (Art. 17 und 21 DSGVO).</p>
+          <p class="stand">Stand: November 2026</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Tattoo Hope · tattoohope.de</span>
+    <span><a href="#impressum">Impressum</a> · <a href="#datenschutz">Datenschutz</a></span>
+  </div>
+</footer>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Tattoo vergrößert">
+  <button class="x" id="lbX" aria-label="Schließen">×</button>
+  <button class="prev" id="lbP" aria-label="Vorheriges Bild">‹</button>
+  <figure><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption></figure>
+  <button class="next" id="lbN" aria-label="Nächstes Bild">›</button>
+</div>
+
+<script>
+(function(){
+  const works=[...document.querySelectorAll('#gallery .work')];
+  const lb=document.getElementById('lb'),img=document.getElementById('lbImg'),cap=document.getElementById('lbCap');
+  let cur=0,last=null;
+  function show(i){cur=(i+works.length)%works.length;const w=works[cur],im=w.querySelector('img');img.src=im.src;img.alt=im.alt;cap.textContent=w.querySelector('.cap b').textContent+' · '+w.querySelector('.cap i').textContent;}
+  function open(i){last=document.activeElement;show(i);lb.hidden=false;document.getElementById('lbX').focus();}
+  function close(){lb.hidden=true;if(last)last.focus();}
+  works.forEach((w,i)=>w.addEventListener('click',()=>open(i)));
+  document.getElementById('lbX').addEventListener('click',close);
+  document.getElementById('lbP').addEventListener('click',()=>show(cur-1));
+  document.getElementById('lbN').addEventListener('click',()=>show(cur+1));
+  lb.addEventListener('click',e=>{if(e.target===lb)close();});
+  document.addEventListener('keydown',e=>{if(lb.hidden)return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1);});
+})();
+</script>
+</body>
+</html>
