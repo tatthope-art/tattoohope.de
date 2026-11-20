@@ -205,6 +205,21 @@ section{padding-block:88px}
 .care h4{font:600 1.35rem/1.2 var(--f-head);margin:0 0 .3em;color:var(--gold-hi)}
 .care p{margin:0;color:var(--ash);max-width:40em}
 
+/* shop */
+.shop{background:var(--soot);border-block:1px solid var(--line);margin-bottom:88px}
+.shop-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.shop-grid > *{min-width:0}
+.shop-pics{position:relative;padding-right:18%;padding-bottom:12%}
+.shop-main{width:100%;aspect-ratio:4/5;object-fit:cover;border:1px solid var(--gold);padding:8px;background:var(--ink)}
+.shop-flat{position:absolute;right:0;bottom:0;width:44%;aspect-ratio:1;object-fit:cover;border:1px solid var(--gold);padding:6px;background:var(--ink)}
+.shop-copy h2{margin:.2em 0 .1em;font:600 clamp(1.8rem,4vw,2.8rem)/1.1 var(--f-mark);color:var(--gold-hi);letter-spacing:.06em}
+.shop-copy h3{font:500 clamp(1.4rem,2.6vw,1.9rem)/1.2 var(--f-head);margin:.2em 0 .6em}
+.shop-copy p{color:var(--ash);max-width:34em}
+.shop-copy .price{font:600 1.6rem/1.2 var(--f-head);color:var(--bone);margin:18px 0 0}
+.shop-copy .price span{display:block;font:400 .78rem/1.5 var(--f-mono);letter-spacing:.04em;color:var(--ash);margin-top:4px}
+.shop-note{margin-top:18px;font-size:.82rem}
+@media (max-width:860px){.shop-grid{grid-template-columns:1fr;gap:32px}}
+
 /* contact */
 .contact{text-align:left}
 .contact .box{border:1px solid var(--gold);padding:clamp(28px,5vw,56px);display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;position:relative}
@@ -257,6 +272,7 @@ footer a{color:var(--ash)}
       <a href="#arbeiten">Arbeiten</a>
       <a href="#tattoo-mobil">Tattoo-Mobil</a>
       <a href="#ablauf">Ablauf</a>
+      <a href="#shop">Shop</a>
       <a href="#termin">Kontakt</a>
     </nav>
     <a class="cta-sm" href="https://www.instagram.com/tattoohope/" target="_blank" rel="noopener">Termin anfragen</a>
@@ -432,6 +448,24 @@ footer a{color:var(--ash)}
     </div>
   </section>
 
+  <section class="shop" id="shop">
+    <div class="wrap shop-grid">
+      <div class="shop-pics">
+        <img class="shop-main" src="img/shop_model.jpg" alt="Ümit im schwarzen Tattoo-Hope-Shirt mit Gold-Logo" loading="lazy" width="944" height="1180">
+        <img class="shop-flat" src="img/shop_shirt.jpg" alt="Schwarzes T-Shirt mit dem Tattoo Hope On the Road Logo in Gold" loading="lazy" width="1000" height="1000">
+      </div>
+      <div class="shop-copy">
+        <div class="eyebrow">Merch</div>
+        <h2>Shop</h2>
+        <h3>Tattoo Hope · On the Road Shirt</h3>
+        <p>Schwarzes T-Shirt mit dem Tattoo-Hope-Logo in Gold. Jedes Shirt wird erst auf deine Bestellung gedruckt und aus der EU verschickt.</p>
+        <p class="price">24,99 $ <span>Besucher aus Deutschland sehen den Preis im Shop automatisch in Euro.</span></p>
+        <div class="btns" style="margin-top:22px"><a class="btn solid" href="https://tattoo-hope-shop.fourthwall.com" target="_blank" rel="noopener">Zum Shop ↗</a></div>
+        <p class="shop-note">Der Shop läuft über Fourthwall, einen externen Anbieter. Bestellung, Bezahlung und Versand werden dort abgewickelt.</p>
+      </div>
+    </div>
+  </section>
+
   <section class="contact" id="termin" style="padding-top:0">
     <div class="wrap">
       <div class="box">
@@ -465,7 +499,7 @@ footer a{color:var(--ash)}
           <h3>Verbraucherstreitbeilegung</h3>
           <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
           <h3>Haftung für Links</h3>
-          <p>Diese Seite enthält Links zu Instagram, TikTok und Google Maps. Für deren Inhalte sind ausschließlich die jeweiligen Anbieter verantwortlich. Zum Zeitpunkt der Verlinkung waren keine Rechtsverstöße erkennbar.</p>
+          <p>Diese Seite enthält Links zu Instagram, TikTok, Google Maps und unserem Shop bei Fourthwall. Für deren Inhalte sind ausschließlich die jeweiligen Anbieter verantwortlich. Zum Zeitpunkt der Verlinkung waren keine Rechtsverstöße erkennbar.</p>
           <h3>Bildrechte</h3>
           <p>Alle Fotos und das Logo: © Tattoo Hope, Ümit Babayigit. Verwendung nur mit Erlaubnis.</p>
         </div>
@@ -491,8 +525,9 @@ footer a{color:var(--ash)}
         <div>
           <h3>5. Kontakt per E-Mail, Telefon oder Instagram</h3>
           <p>Wenn du uns kontaktierst, verarbeiten wir deine Angaben (zum Beispiel Name, Nachricht, Motivwunsch, Fotos), um deine Anfrage zu beantworten und deinen Termin vorzubereiten (Art. 6 Abs. 1 lit. b DSGVO). Wir löschen die Daten, wenn sie dafür nicht mehr gebraucht werden und keine gesetzlichen Aufbewahrungsfristen bestehen. Bei Nachrichten über Instagram oder TikTok gelten zusätzlich die Datenschutzbestimmungen von Meta beziehungsweise TikTok.</p>
-          <h3>6. Links zu Instagram, TikTok und Google Maps</h3>
-          <p>Auf dieser Seite sind Instagram, TikTok und Google Maps nur verlinkt, nicht eingebettet. Es werden erst Daten an diese Anbieter übertragen, wenn du einen Link anklickst. Danach gelten deren Datenschutzbestimmungen.</p>
+          <h3>6. Links zu Instagram, TikTok, Google Maps und zum Shop</h3>
+          <p>Auf dieser Seite sind Instagram, TikTok, Google Maps und unser Merch-Shop nur verlinkt, nicht eingebettet. Es werden erst Daten an diese Anbieter übertragen, wenn du einen Link anklickst. Danach gelten deren Datenschutzbestimmungen.</p>
+          <p style="margin-top:10px">Unser Shop wird von Fourthwall, Inc. (USA) betrieben. Bestellung, Bezahlung und Versand laufen vollständig über Fourthwall. Welche Daten dort verarbeitet werden, steht in der Datenschutzerklärung von Fourthwall: fourthwall.com/privacy</p>
           <h3>7. Deine Rechte</h3>
           <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch (Art. 15 bis 21 DSGVO). Schreib dazu einfach an die oben genannte E-Mail-Adresse. Außerdem kannst du dich bei einer Datenschutz-Aufsichtsbehörde beschweren (Art. 77 DSGVO), zum Beispiel bei der für uns zuständigen Landesbeauftragten für Datenschutz und Informationsfreiheit Nordrhein-Westfalen, Kavalleriestraße 2–4, 40213 Düsseldorf.</p>
           <h3>8. Fotos von Kundinnen und Kunden</h3>
