@@ -108,74 +108,6 @@ img{max-width:100%;height:auto;display:block}
 .eyebrow{font:500 .76rem/1.4 var(--f-mono);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
 .hero h1{margin:.6em 0 .2em;width:min(100%,540px)}
 .hero h1 img{width:100%;height:auto;filter:drop-shadow(0 18px 40px rgba(201,162,75,.18))}
-/* story animation: 5 scenes, 16 s loop, each scene owns 20 % of the timeline */
-.story{margin:22px 0 0;width:min(100%,540px)}
-.story svg{display:block;width:100%;height:auto;overflow:visible}
-.story .ln{fill:none;stroke:var(--gold);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.story .fl{fill:var(--soot);stroke:var(--gold);stroke-width:2;stroke-linejoin:round}
-.story .fl.gold{fill:var(--gold)}
-.story .dot{fill:var(--gold-hi)}
-.story .whl{fill:var(--ink);stroke:var(--gold);stroke-width:2}
-.story .door{fill:var(--soot);stroke:var(--gold-hi);stroke-width:2}
-.story .doorway{fill:rgba(236,210,138,.25);stroke:none}
-.story .road{stroke-dasharray:14 12;opacity:.55}
-.story .city .ln{opacity:.45}
-.story .trail{fill:none;stroke:var(--gold);stroke-width:1.5;stroke-dasharray:3 7;opacity:.5}
-.story .ink{fill:none;stroke:var(--gold-hi);stroke-width:3;stroke-linecap:round;stroke-dasharray:140;stroke-dashoffset:140}
-.story .check{fill:none;stroke:var(--gold-hi);stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:70;stroke-dashoffset:70}
-.story text{font-family:var(--f-body);fill:var(--bone)}
-.story .cap{font:500 11px var(--f-mono);letter-spacing:.14em;text-transform:uppercase;fill:var(--ash);text-anchor:middle}
-.story .msg{font-size:14px}
-.story .msg.dark{fill:var(--ink);font-weight:700}
-.story .mono{font:500 11px var(--f-mono);fill:var(--gold-hi);text-anchor:middle}
-.story .mono-big{font:600 34px var(--f-mark);fill:var(--gold-hi);text-anchor:middle}
-.story .vantext{font:600 10px var(--f-mark);letter-spacing:.16em;fill:var(--gold-hi);text-anchor:middle}
-.story .sc,.story .pop,.story .env,.story .b1,.story .b2,.story .cal,.story .drive,.story .wheel,.story .door,.story .walker,.story .machine{transform-box:fill-box;animation-duration:16s;animation-iteration-count:infinite;animation-timing-function:ease-in-out}
-.story .sc{opacity:0}
-.sc1{animation-name:s1}.sc2{animation-name:s2}.sc3{animation-name:s3}.sc4{animation-name:s4}.sc5{animation-name:s5}
-@keyframes s1{0%{opacity:0}2%,18%{opacity:1}20%,100%{opacity:0}}
-@keyframes s2{0%,20%{opacity:0}22%,38%{opacity:1}40%,100%{opacity:0}}
-@keyframes s3{0%,40%{opacity:0}42%,58%{opacity:1}60%,100%{opacity:0}}
-@keyframes s4{0%,60%{opacity:0}62%,78%{opacity:1}80%,100%{opacity:0}}
-@keyframes s5{0%,80%{opacity:0}82%,98%{opacity:1}100%{opacity:0}}
-.story .pop{transform-origin:center;animation-name:pop}
-@keyframes pop{0%,3%{transform:scale(0)}5%,100%{transform:scale(1)}}
-.story .env{animation-name:fly}
-@keyframes fly{0%,6%{transform:translate(0,0);opacity:0}7%{opacity:1}11%{transform:translate(140px,-46px)}15%{transform:translate(285px,8px);opacity:1}17%,100%{transform:translate(285px,8px);opacity:0}}
-.story .b1{animation-name:b1}.story .b2{animation-name:b2}.story .cal{animation-name:cal}
-@keyframes b1{0%,22%{opacity:0;transform:translateY(8px)}24%,100%{opacity:1;transform:none}}
-@keyframes b2{0%,27%{opacity:0;transform:translateY(8px)}29%,100%{opacity:1;transform:none}}
-@keyframes cal{0%,32%{opacity:0;transform:scale(.8)}34%,100%{opacity:1;transform:none}}
-.story .drive{animation-name:drive}
-@keyframes drive{0%,41%{transform:translateX(-400px)}55%,100%{transform:translateX(0)}}
-.story .wheel{transform-origin:center;animation-name:roll}
-@keyframes roll{0%,41%{transform:rotate(0)}55%,100%{transform:rotate(1080deg)}}
-.story .door{transform-origin:left center;animation-name:door}
-@keyframes door{0%,63%{transform:none}65%,100%{transform:scaleX(.15)}}
-.story .walker{animation-name:walk}
-@keyframes walk{0%,64%{transform:translateX(0);opacity:1}73%{transform:translateX(-104px);opacity:1}75%,100%{transform:translateX(-104px);opacity:0}}
-.story .machine{animation-name:buzz}
-@keyframes buzz{0%,82%{transform:translate(-110px,0)}88%{transform:translate(-40px,-2px)}89%{transform:translate(-40px,1px)}90%,100%{transform:translate(0,0)}}
-.story .ink{animation:ink 16s infinite ease-in-out}
-@keyframes ink{0%,83%{stroke-dashoffset:140}90%,100%{stroke-dashoffset:0}}
-.story .check{animation:check 16s infinite ease-out}
-@keyframes check{0%,90%{stroke-dashoffset:70}94%,100%{stroke-dashoffset:0}}
-.steps-mini{list-style:none;margin:10px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:4px;border-top:1px solid var(--line)}
-.steps-mini li{position:relative;padding-top:8px;text-align:center;font:500 .66rem/1.2 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;min-width:0}
-.steps-mini span{color:var(--ash)}
-.steps-mini b{position:absolute;left:0;right:0;top:8px;font-weight:500;color:var(--gold-hi);opacity:0;animation:16s infinite}
-.steps-mini li::before{content:"";position:absolute;left:12%;right:12%;top:-1px;height:2px;background:var(--gold-hi);opacity:0;animation:inherit}
-.steps-mini li:nth-child(1) b,.steps-mini li:nth-child(1)::before{animation:s1 16s infinite}
-.steps-mini li:nth-child(2) b,.steps-mini li:nth-child(2)::before{animation:s2 16s infinite}
-.steps-mini li:nth-child(3) b,.steps-mini li:nth-child(3)::before{animation:s3 16s infinite}
-.steps-mini li:nth-child(4) b,.steps-mini li:nth-child(4)::before{animation:s4 16s infinite}
-.steps-mini li:nth-child(5) b,.steps-mini li:nth-child(5)::before{animation:s5 16s infinite}
-@media (max-width:420px){.steps-mini li{font-size:.56rem;letter-spacing:.04em}}
-@media (prefers-reduced-motion:reduce){
-  .story .sc{opacity:0}.story .sc3{opacity:1}
-  .story .drive{transform:none}
-  .steps-mini li:nth-child(3) b{opacity:1}
-}
 .hero p.lead{max-width:34em;color:var(--ash);font-size:1.06rem;margin:1.3em 0 2em}
 .btns{display:flex;gap:12px;flex-wrap:wrap}
 .btn{display:inline-flex;align-items:center;gap:10px;font:500 .82rem/1 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding:16px 22px;border-radius:2px;border:1px solid var(--gold);transition:background .2s,color .2s}
@@ -410,11 +342,272 @@ footer a{display:inline-block;padding:12px 4px}
 .split h2{font:500 clamp(1.7rem,3.2vw,2.4rem)/1.15 var(--f-head);margin:.3em 0 .6em;text-wrap:balance}
 .step h3{font:600 1.3rem/1.2 var(--f-head);margin:.5em 0 .3em}
 .care h3{font:600 1.35rem/1.2 var(--f-head);margin:0 0 .3em;color:var(--gold-hi)}
-.story{position:relative}
-.story .pause{position:absolute;top:0;right:0;width:32px;height:32px;display:grid;place-items:center;background:none;border:1px solid var(--line);border-radius:2px;color:var(--ash);cursor:pointer;opacity:.6;transition:opacity .2s}
-.story .pause:hover,.story .pause:focus-visible{opacity:1;color:var(--gold-hi)}
-.story.paused *,.story.paused *::before{animation-play-state:paused!important}
-@media (prefers-reduced-motion:reduce){.hero h1::after{display:none}.story .pause{display:none}}
+@media (prefers-reduced-motion:reduce){.hero h1::after{display:none}}
+/* =====================================================================
+   STORY 3D – Entwurf A "3D-Bühne / Produktfilm"
+   Alles unter .story3d. 5 Szenen, 18 s Loop, jede Szene besitzt 20 %.
+   Zeitachse: jedes animierte Element erbt --d (Szenen-Offset) und
+   schreibt seine Keyframes in Szenen-lokaler Zeit (0–22 % von 18 s).
+   ===================================================================== */
+.story3d{
+  --T:18s;--d:0s;
+  --s3-bg:#0b0a08;--s3-surface:#14120e;--s3-gold:#c9a24b;--s3-gold-hi:#ecd28a;
+  --s3-text:#ece6d8;--s3-muted:#9d958a;--s3-line:rgba(236,230,216,.12);
+  position:relative;width:min(100%,540px);margin:22px 0 0;padding:0;
+  overflow:hidden;font-family:'Manrope',system-ui,sans-serif;color:var(--s3-text);
+  -webkit-tap-highlight-color:transparent
+}
+.story3d *,.story3d *::before,.story3d *::after{box-sizing:border-box}
+
+/* Bühne */
+.story3d .s3-viewport{position:relative;padding:14px 12px 30px;perspective:1100px;perspective-origin:50% 18%;overflow:hidden}
+.story3d .s3-tilt,.story3d .s3-sway,.story3d .s3-card,.story3d .s3-scene,.story3d .s3-dust{transform-style:preserve-3d}
+.story3d .s3-tilt{position:relative;transform:rotateX(9deg);will-change:transform}
+.story3d .s3-sway{position:relative}
+.story3d .s3-card{position:relative;aspect-ratio:500/216}
+
+/* Glasplatte mit Goldkante (Dicke = edge hinter face) */
+.story3d .s3-edge,.story3d .s3-face{position:absolute;inset:0;border-radius:14px}
+.story3d .s3-edge{transform:translateZ(-52px) scale(1.047);
+  background:linear-gradient(180deg,#6d5427 0%,#2a2010 45%,#100d08 100%);
+  box-shadow:0 34px 60px -18px rgba(0,0,0,.95),0 0 60px -12px rgba(201,162,75,.25)}
+.story3d .s3-face{transform:translateZ(-40px) scale(1.036);
+  background:
+    radial-gradient(120% 90% at 70% 30%,rgba(201,162,75,.12),transparent 60%),
+    radial-gradient(80% 70% at 15% 100%,rgba(236,210,138,.06),transparent 60%),
+    linear-gradient(160deg,#1c1913 0%,#14120e 50%,#0d0b08 100%);
+  border:1px solid rgba(201,162,75,.5);
+  box-shadow:inset 0 1px 0 rgba(236,210,138,.35),inset 0 -24px 40px rgba(0,0,0,.45),inset 0 0 0 1px rgba(0,0,0,.35)}
+.story3d .s3-face::before{content:"";position:absolute;inset:8px;border-radius:9px;border:1px solid rgba(201,162,75,.14)}
+.story3d .s3-face::after{content:"";position:absolute;inset:8px;
+  --c:rgba(236,210,138,.7);
+  background:
+    linear-gradient(var(--c),var(--c)) left top/16px 1px no-repeat,linear-gradient(var(--c),var(--c)) left top/1px 16px no-repeat,
+    linear-gradient(var(--c),var(--c)) right top/16px 1px no-repeat,linear-gradient(var(--c),var(--c)) right top/1px 16px no-repeat,
+    linear-gradient(var(--c),var(--c)) left bottom/16px 1px no-repeat,linear-gradient(var(--c),var(--c)) left bottom/1px 16px no-repeat,
+    linear-gradient(var(--c),var(--c)) right bottom/16px 1px no-repeat,linear-gradient(var(--c),var(--c)) right bottom/1px 16px no-repeat}
+
+/* Spiegelnder Boden */
+.story3d .s3-floor{position:absolute;left:-25%;width:150%;top:100%;height:260px;transform-origin:50% 0;
+  transform:translateY(6px) rotateX(90deg);pointer-events:none;
+  background:
+    radial-gradient(40% 32% at 50% 0%,rgba(201,162,75,.30),transparent 70%),
+    repeating-linear-gradient(90deg,rgba(201,162,75,.16) 0 1px,transparent 1px 36px),
+    repeating-linear-gradient(0deg,rgba(201,162,75,.16) 0 1px,transparent 1px 36px);
+  -webkit-mask-image:radial-gradient(55% 75% at 50% 0%,#000 10%,transparent 75%);
+          mask-image:radial-gradient(55% 75% at 50% 0%,#000 10%,transparent 75%)}
+
+/* Szenen + Tiefenebenen */
+.story3d .s3-scene{position:absolute;inset:0;--d:calc(var(--i) * var(--T) / 5)}
+.story3d .s3-l{position:absolute;inset:0;width:100%;height:100%;display:block;opacity:0}
+.story3d .s3-back{transform:translateZ(-22px) scale(1.02)}
+.story3d .s3-front{transform:translateZ(42px) scale(.962)}
+.story3d .s3-cap{position:absolute;left:6.4%;top:9%;transform:translateZ(28px) scale(.975);transform-origin:0 0;opacity:0;
+  display:flex;flex-direction:column;gap:2px;pointer-events:none;text-shadow:0 2px 12px rgba(0,0,0,.8)}
+.story3d .s3-num{display:flex;align-items:center;gap:8px;font:600 .62rem/1 'Cinzel',serif;letter-spacing:.24em;color:var(--s3-gold)}
+.story3d .s3-num::after{content:"";width:22px;height:1px;background:linear-gradient(90deg,var(--s3-gold),transparent)}
+.story3d .s3-ttl{font:600 1.32rem/1.05 'Cormorant Garamond',serif;color:var(--s3-text);letter-spacing:.01em}
+.story3d .s3-sub{font:500 .66rem/1.3 'Manrope',sans-serif;color:var(--s3-muted);max-width:15em}
+
+/* Glasscheibe vorne: Lichtstreifen + Spiegelung (folgt der Maus) */
+.story3d .s3-glass{position:absolute;inset:0;border-radius:14px;overflow:hidden;pointer-events:none;
+  transform:translateZ(54px) scale(.951);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.07),inset 0 0 0 1px rgba(236,210,138,.06)}
+.story3d .s3-sweep{position:absolute;top:-30%;bottom:-30%;left:0;width:38%;
+  background:linear-gradient(100deg,transparent 0%,rgba(236,210,138,.0) 30%,rgba(236,210,138,.16) 50%,rgba(236,210,138,0) 70%,transparent 100%);
+  transform:translateX(-120%) skewX(-14deg);will-change:transform;
+  animation:s3-sweep calc(var(--T) / 5) cubic-bezier(.5,0,.3,1) infinite}
+.story3d .s3-spec{position:absolute;left:50%;top:30%;width:70%;aspect-ratio:1;margin:-35% 0 0 -35%;border-radius:50%;
+  background:radial-gradient(closest-side,rgba(236,210,138,.10),transparent);will-change:transform}
+
+/* Goldstaub in verschiedenen Tiefen */
+.story3d .s3-dust{position:absolute;inset:0;pointer-events:none}
+.story3d .s3-dust i{position:absolute;width:3px;height:3px;border-radius:50%;background:var(--s3-gold-hi);
+  box-shadow:0 0 6px 1px rgba(236,210,138,.55);opacity:0;
+  transform:translate3d(0,0,var(--z));animation:s3-dust var(--t,9s) ease-in-out infinite;animation-delay:var(--dl,0s)}
+
+/* SVG-Grafik */
+.story3d svg text{font-family:'Manrope',sans-serif}
+.story3d .ln{fill:none;stroke:var(--s3-gold);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.story3d .ln-hi{fill:none;stroke:var(--s3-gold-hi);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.story3d .ln-soft{fill:none;stroke:rgba(201,162,75,.35);stroke-width:1.2}
+.story3d .glass{fill:url(#s3d-glass);stroke:var(--s3-gold);stroke-width:1.4}
+.story3d .goldfill{fill:url(#s3d-gold)}
+.story3d .cap{font:500 9.5px 'DM Mono',monospace;letter-spacing:.2em;fill:var(--s3-muted);text-anchor:middle}
+.story3d .msg{font-size:14.5px;font-weight:500;fill:var(--s3-text)}
+.story3d .msg-d{font-size:14.5px;font-weight:700;fill:#17130b}
+.story3d .mono{font:500 10.5px 'DM Mono',monospace;letter-spacing:.08em;fill:var(--s3-gold-hi);text-anchor:middle}
+.story3d .chip{font:500 8.5px 'DM Mono',monospace;letter-spacing:.16em;fill:var(--s3-text);text-anchor:middle}
+.story3d .mark{font:600 30px 'Cinzel',serif;fill:var(--s3-gold-hi);text-anchor:middle}
+.story3d .draw{stroke-dasharray:1 1;stroke-dashoffset:1}
+
+/* Gemeinsame Zeitachse */
+.story3d .s3-scene,.story3d .s3-scene>.s3-l,.story3d .s3-scene>.s3-cap,.story3d .a,
+.story3d .s3-steps b,.story3d .s3-steps li::before{
+  animation-duration:var(--T);animation-delay:var(--d);animation-iteration-count:infinite;
+  animation-fill-mode:both;animation-timing-function:cubic-bezier(.55,0,.25,1)}
+.story3d .a{transform-box:fill-box;transform-origin:center}
+.story3d .s3-scene{animation-name:s3-scene;will-change:transform}
+.story3d .s3-scene>.s3-l,.story3d .s3-scene>.s3-cap{animation-name:s3-fade}
+
+@keyframes s3-scene{
+  0%{transform:translate3d(30%,0,-200px) rotateY(-62deg)}
+  3.6%{transform:translate3d(0,0,0) rotateY(0)}
+  18%{transform:translate3d(0,0,0) rotateY(0)}
+  22%,100%{transform:translate3d(-30%,0,-200px) rotateY(62deg)}
+}
+@keyframes s3-fade{0%{opacity:0}3%,18.4%{opacity:1}21.6%,100%{opacity:0}}
+@keyframes s3-sweep{0%,8%{transform:translateX(-120%) skewX(-14deg)}42%,100%{transform:translateX(320%) skewX(-14deg)}}
+@keyframes s3-dust{0%{opacity:0;transform:translate3d(0,14px,var(--z))}30%,70%{opacity:var(--o,.7)}100%{opacity:0;transform:translate3d(6px,-26px,var(--z))}}
+@keyframes s3-sway{0%{transform:rotateY(-7deg) rotateX(1.5deg)}100%{transform:rotateY(7deg) rotateX(-1.5deg)}}
+
+/* --- Szene 1: Anfrage --- */
+.story3d .s1-typing{animation-name:s1-pop}
+.story3d .s1-sent{animation-name:s1-sent}
+.story3d .s1-dot{animation-name:s1-dot;transform-origin:center}
+.story3d .s1-dot:nth-child(2){animation-delay:calc(var(--d) + .12s)}
+.story3d .s1-dot:nth-child(3){animation-delay:calc(var(--d) + .24s)}
+.story3d .s1-env{animation-name:s1-env}
+.story3d .s1-trail{animation-name:s1-trail}
+.story3d .s1-ring{animation-name:s1-ring}
+.story3d .s1-medal{animation-name:s1-medal}
+@keyframes s1-pop{0%,2.5%{transform:scale(0);opacity:0}4%{transform:scale(1.1);opacity:1}5%,6%{transform:scale(1);opacity:1}7%,100%{transform:scale(.9);opacity:0}}
+@keyframes s1-dot{0%,3%{transform:translateY(0)}3.6%{transform:translateY(-2px)}4.2%,100%{transform:translateY(0)}}
+@keyframes s1-sent{0%,6%{transform:translateY(8px) scale(.6);opacity:0}7.5%,100%{transform:none;opacity:1}}
+@keyframes s1-trail{0%,7%{stroke-dashoffset:1}13.5%,100%{stroke-dashoffset:0}}
+@keyframes s1-env{
+  0%,7%{transform:translate(0,0) rotate(-18deg) scale(.4);opacity:0}
+  7.8%{transform:translate(8px,-8px) rotate(-18deg) scale(1);opacity:1}
+  9.2%{transform:translate(40px,-34px) rotate(-12deg) scale(1.1)}
+  10.6%{transform:translate(84px,-50px) rotate(0deg) scale(1.15)}
+  12%{transform:translate(124px,-36px) rotate(14deg) scale(1.05)}
+  13.4%{transform:translate(152px,-2px) rotate(22deg) scale(.6);opacity:1}
+  14%,100%{transform:translate(152px,-2px) rotate(22deg) scale(.3);opacity:0}}
+@keyframes s1-ring{0%,13.2%{transform:scale(1);opacity:0}13.6%{opacity:.9}17%,100%{transform:scale(1.7);opacity:0}}
+@keyframes s1-medal{0%,13%{transform:scale(1)}14%{transform:scale(1.08)}15.5%,100%{transform:scale(1)}}
+
+/* --- Szene 2: Absprache --- */
+.story3d .s2-b1{animation-name:s2-b1}
+.story3d .s2-b2{animation-name:s2-b2}
+.story3d .s2-cal{animation-name:s2-cal}
+.story3d .s2-tick{animation-name:s2-tick}
+.story3d .s2-chip{animation-name:s2-chip}
+.story3d .s2-chip.c2{animation-delay:calc(var(--d) + .3s)}
+.story3d .s2-chip.c3{animation-delay:calc(var(--d) + .6s)}
+@keyframes s2-b1{0%,2.5%{transform:translateY(12px) scale(.85);opacity:0}5%,100%{transform:none;opacity:1}}
+@keyframes s2-b2{0%,6.5%{transform:translateY(12px) scale(.85);opacity:0}9%,100%{transform:none;opacity:1}}
+@keyframes s2-cal{0%,10%{transform:translateY(-10px) rotate(-8deg) scale(.7);opacity:0}12.4%{transform:rotate(2deg) scale(1.04);opacity:1}13.4%,100%{transform:none;opacity:1}}
+@keyframes s2-tick{0%,13%{stroke-dashoffset:1}15%,100%{stroke-dashoffset:0}}
+@keyframes s2-chip{0%,13%{transform:translateY(6px);opacity:0}14.6%,100%{transform:none;opacity:1}}
+
+/* --- Szene 3: Anfahrt --- */
+.story3d .s3-drive{animation-name:s3-drive;transform-box:view-box;transform-origin:0 0}
+.story3d .s3-wheel{animation-name:s3-wheel}
+.story3d .s3-sky{animation-name:s3-sky;animation-timing-function:linear;transform-box:view-box}
+.story3d .s3-dash{animation-name:s3-dash;transform-box:view-box}
+.story3d .s3-posts{animation-name:s3-posts;transform-box:view-box}
+.story3d .s3-pin{animation-name:s3-pin}
+.story3d .s3-beam{animation-name:s3-beam}
+@keyframes s3-drive{0%,1.5%{transform:translateX(-340px)}12%{transform:translateX(4px)}13%{transform:translateX(0) translateY(-1px)}14%,100%{transform:none}}
+@keyframes s3-wheel{0%,1.5%{transform:rotate(0)}12%,100%{transform:rotate(900deg)}}
+@keyframes s3-sky{0%{transform:translateX(0)}22%,100%{transform:translateX(-80px)}}
+@keyframes s3-dash{0%,1.5%{transform:translateX(0)}12%,100%{transform:translateX(-480px)}}
+@keyframes s3-posts{0%,1.5%{transform:translateX(0)}12%,100%{transform:translateX(-720px)}}
+@keyframes s3-pin{0%,11.5%{transform:translateY(-34px);opacity:0}13.2%{transform:translateY(2px);opacity:1}14%,100%{transform:none;opacity:1}}
+@keyframes s3-beam{0%,4%{opacity:0}8%,100%{opacity:1}}
+
+/* --- Szene 4: Einsteigen --- */
+.story3d .s4-door{animation-name:s4-door;transform-origin:left center}
+.story3d .s4-light{animation-name:s4-light}
+.story3d .s4-win{animation-name:s4-win}
+.story3d .s4-walk{animation-name:s4-walk;transform-box:view-box;transform-origin:0 0}
+.story3d .s4-step{animation-name:s4-step}
+@keyframes s4-door{0%,4%{transform:none}6.5%,100%{transform:scaleX(.14)}}
+@keyframes s4-light{0%,4.5%{opacity:0}7%,13%{opacity:.85}16%,100%{opacity:1}}
+@keyframes s4-win{0%,14.5%{opacity:0}16.5%,100%{opacity:.9}}
+@keyframes s4-walk{
+  0%,2%{transform:translateX(30px);opacity:0}
+  4%{transform:translateX(10px);opacity:1}
+  13%{transform:translateX(-112px);opacity:1}
+  15%,100%{transform:translateX(-118px) scale(.9);opacity:0}}
+@keyframes s4-step{
+  0%,4%{transform:translateY(0)}5%{transform:translateY(-2px)}6%{transform:translateY(0)}7%{transform:translateY(-2px)}8%{transform:translateY(0)}
+  9%{transform:translateY(-2px)}10%{transform:translateY(0)}11%{transform:translateY(-2px)}12%,100%{transform:translateY(0)}}
+
+/* --- Szene 5: Tätowieren -> Fertig --- */
+.story3d .s5-lion{animation-name:s5-lion;animation-timing-function:linear}
+.story3d .s5-shade{animation-name:s5-shade}
+.story3d .s5-mach{animation-name:s5-mach;transform-box:view-box;transform-origin:0 0}
+.story3d .s5-tip{animation-name:s5-tip}
+.story3d .s5-circ{animation-name:s5-circ}
+.story3d .s5-check{animation-name:s5-check}
+.story3d .s5-ray{animation-name:s5-ray;transform-box:view-box;transform-origin:0 0}
+.story3d .s5-done{animation-name:s5-done}
+@keyframes s5-lion{0%,3.5%{stroke-dashoffset:1}12.5%,100%{stroke-dashoffset:0}}
+@keyframes s5-shade{0%,11.5%{opacity:0}14%,100%{opacity:1}}
+@keyframes s5-mach{
+  0%,1%{transform:translate(330px,-40px);opacity:0}
+  3.5%{transform:translate(200px,126px);opacity:1}
+  5%{transform:translate(214px,130px)}
+  6.5%{transform:translate(222px,146px)}
+  8%{transform:translate(214px,166px)}
+  9.5%{transform:translate(190px,168px)}
+  11%{transform:translate(178px,144px)}
+  12.5%{transform:translate(200px,152px);opacity:1}
+  14.5%,100%{transform:translate(300px,40px);opacity:0}}
+@keyframes s5-tip{0%,3.5%{opacity:0}4%,12.5%{opacity:1}13%,100%{opacity:0}}
+@keyframes s5-circ{0%,13%{stroke-dashoffset:1}15.5%,100%{stroke-dashoffset:0}}
+@keyframes s5-check{0%,15%{stroke-dashoffset:1}17%,100%{stroke-dashoffset:0}}
+@keyframes s5-ray{0%,16.4%{transform:translateX(0);opacity:0}17%{opacity:1}19.5%,100%{transform:translateX(12px);opacity:0}}
+@keyframes s5-done{0%,16%{opacity:0;transform:translateY(5px)}17.5%,100%{opacity:1;transform:none}}
+
+/* Schritt-Anzeige */
+.story3d .s3-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;border-top:1px solid var(--s3-line)}
+.story3d .s3-steps li{position:relative;padding-top:9px;text-align:center;font:500 .64rem/1.2 'DM Mono',monospace;letter-spacing:.12em;text-transform:uppercase;min-width:0;--d:calc(var(--i) * var(--T) / 5)}
+.story3d .s3-steps span{color:var(--s3-muted);opacity:.7}
+.story3d .s3-steps b{position:absolute;left:0;right:0;top:9px;font-weight:500;color:var(--s3-gold-hi);opacity:0;animation-name:s3-on;text-shadow:0 0 12px rgba(236,210,138,.45)}
+.story3d .s3-steps li::before{content:"";position:absolute;left:8%;right:8%;top:-1px;height:2px;border-radius:2px;
+  background:linear-gradient(90deg,var(--s3-gold),var(--s3-gold-hi));box-shadow:0 0 8px rgba(236,210,138,.6);
+  transform-origin:0 50%;transform:scaleX(0);opacity:0;animation-name:s3-bar;animation-timing-function:linear}
+@keyframes s3-on{0%{opacity:0}2%,18.5%{opacity:1}21%,100%{opacity:0}}
+@keyframes s3-bar{0%{transform:scaleX(0);opacity:1}20%{transform:scaleX(1);opacity:1}21.5%,100%{transform:scaleX(1);opacity:0}}
+
+/* Pause-Knopf */
+.story3d .s3-pause{position:absolute;top:8px;right:6px;z-index:5;width:44px;height:44px;padding:0;border:0;background:none;cursor:pointer;color:var(--s3-gold-hi);display:grid;place-items:center}
+.story3d .s3-pause span{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;
+  background:rgba(20,18,14,.72);border:1px solid rgba(201,162,75,.45);box-shadow:inset 0 1px 0 rgba(236,210,138,.25),0 4px 14px rgba(0,0,0,.5);
+  transition:background .2s,border-color .2s}
+.story3d .s3-pause:hover span{background:rgba(201,162,75,.18);border-color:var(--s3-gold-hi)}
+.story3d .s3-pause:focus-visible{outline:none}
+.story3d .s3-pause:focus-visible span{outline:2px solid var(--s3-gold-hi);outline-offset:2px}
+
+.story3d.is-paused *,.story3d.is-paused *::before,.story3d.is-paused *::after,
+.story3d.is-off *,.story3d.is-off *::before,.story3d.is-off *::after{animation-play-state:paused!important}
+
+/* Touch-Geräte: sanftes Auto-Schwingen statt Maus-Tilt */
+@media (hover:none),(pointer:coarse){
+  .story3d .s3-sway{animation:s3-sway 9s ease-in-out infinite alternate}
+}
+@media (max-width:480px){
+  .story3d .s3-card{aspect-ratio:1.55}
+  .story3d .s3-viewport{padding:12px 8px 26px}
+  .story3d .s3-ttl{font-size:1.12rem}
+  .story3d .s3-sub{font-size:.6rem}
+  .story3d .s3-steps li{font-size:.56rem;letter-spacing:.04em}
+}
+@media (max-width:360px){.story3d .s3-steps li{font-size:.5rem;letter-spacing:0}.story3d .s3-sub{display:none}}
+
+/* Bewegung reduzieren: ruhiges Standbild (Szene 3) */
+@media (prefers-reduced-motion:reduce){
+  .story3d *,.story3d *::before,.story3d *::after{animation:none!important;transition:none!important}
+  .story3d .s3-tilt{transform:rotateX(6deg)!important}
+  .story3d .s3-scene{transform:none}
+  .story3d .s3-scene[data-s="3"]>.s3-l,.story3d .s3-scene[data-s="3"]>.s3-cap{opacity:1}
+  .story3d .s3-steps li[data-s="3"] b{opacity:1}
+  .story3d .s3-steps li[data-s="3"]::before{opacity:1;transform:scaleX(1)}
+  .story3d .s3-pause,.story3d .s3-sweep,.story3d .s3-dust,.story3d .s3-posts{display:none}
+  .story3d .s3-pin,.story3d .s3-beam{opacity:1}
+}
 </style>
 </head>
 <body>
@@ -442,75 +635,254 @@ footer a{display:inline-block;padding:12px 4px}
       <div class="hero-copy">
         <div class="eyebrow">Mobiles Tattoo-Studio · Est. 2013</div>
         <h1><img src="img/logo_1080.webp" alt="" width="1080" height="969" fetchpriority="high"><span class="vh">Tattoo Hope on the Road – Tätowierer Ümit Babayigit aus Wuppertal, mobiles Tattoo-Studio seit 2013</span></h1>
-        <figure class="story" role="img" aria-label="So läuft es ab: Du schickst eine Anfrage, wir sprechen alles ab, das Tattoo-Mobil kommt in deine Stadt, du steigst ein, es wird tätowiert, fertig.">
-          <button class="pause" type="button" id="storyPause" aria-label="Animation anhalten" aria-pressed="false"><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M3 2h2v8H3zM7 2h2v8H7z" fill="currentColor"/></svg></button>
-          <svg viewBox="0 0 540 200" aria-hidden="true">
+  <figure class="story3d" role="img" aria-label="So läuft es ab: 1. Anfrage per WhatsApp oder Instagram an Ümit. 2. Absprache von Motiv und Termin. 3. Das Tattoo-Mobil fährt in deine Stadt. 4. Du steigst ins mobile Studio ein. 5. Es wird tätowiert – fertig.">
+    <!-- gemeinsame Verläufe + Wohnmobil-Karosserie -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="s3d-glass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#26211a"/><stop offset="1" stop-color="#121009"/></linearGradient>
+        <linearGradient id="s3d-gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f3dc98"/><stop offset=".55" stop-color="#c9a24b"/><stop offset="1" stop-color="#8f6d2a"/></linearGradient>
+        <linearGradient id="s3d-white" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbf7ee"/><stop offset=".6" stop-color="#e4dccb"/><stop offset="1" stop-color="#b9b09c"/></linearGradient>
+        <linearGradient id="s3d-win" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a3428"/><stop offset=".5" stop-color="#14120e"/><stop offset="1" stop-color="#26211a"/></linearGradient>
+        <linearGradient id="s3d-beam" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ecd28a" stop-opacity=".55"/><stop offset="1" stop-color="#ecd28a" stop-opacity="0"/></linearGradient>
+        <linearGradient id="s3d-road" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d1913"/><stop offset="1" stop-color="#0b0a08" stop-opacity="0"/></linearGradient>
+        <linearGradient id="s3d-spill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ecd28a" stop-opacity=".6"/><stop offset="1" stop-color="#ecd28a" stop-opacity="0"/></linearGradient>
+        <radialGradient id="s3d-glow"><stop offset="0" stop-color="#c9a24b" stop-opacity=".35"/><stop offset="1" stop-color="#c9a24b" stop-opacity="0"/></radialGradient>
+        <radialGradient id="s3d-shade"><stop offset="0" stop-color="#9d958a" stop-opacity=".45"/><stop offset="1" stop-color="#9d958a" stop-opacity="0"/></radialGradient>
+        <radialGradient id="s3d-shadow"><stop offset="0" stop-color="#000" stop-opacity=".75"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+        <!-- weißes 91er Wohnmobil, teilintegriert, ohne Alkoven (lokal 0..220 x 0..90) -->
+        <symbol id="s3d-van" viewBox="0 0 220 90" overflow="visible">
+          <rect x="38" y="-1" width="104" height="5" rx="1" fill="#1a1712" stroke="#c9a24b" stroke-width=".8"/>
+          <path d="M60 -1 v5 M84 -1 v5 M108 -1 v5" stroke="#c9a24b" stroke-width=".5" opacity=".7"/>
+          <rect x="18" y="0" width="12" height="4" rx="1.5" fill="#d6cdb9"/>
+          <path d="M8 4 H164 Q172 4 174 12 L178 24 Q185 25 190 32 L206 50 Q216 52 216 60 V74 Q216 78 212 78 H8 Q4 78 4 74 V8 Q4 4 8 4 Z" fill="url(#s3d-white)" stroke="rgba(201,162,75,.55)" stroke-width="1"/>
+          <path d="M180 29 L189 33 L203 49 L183 49 Z" fill="url(#s3d-win)" stroke="rgba(201,162,75,.5)" stroke-width=".8"/>
+          <path d="M152 28 H175 L181 47 H152 Z" fill="url(#s3d-win)"/>
+          <rect x="20" y="15" width="34" height="18" rx="3" fill="url(#s3d-win)"/>
+          <rect x="64" y="15" width="34" height="18" rx="3" fill="url(#s3d-win)"/>
+          <rect x="118" y="14" width="24" height="52" rx="2" fill="none" stroke="#a69c86" stroke-width="1"/>
+          <rect x="4" y="54" width="212" height="3.5" fill="url(#s3d-gold)"/>
+          <rect x="4" y="59.5" width="212" height="1.2" fill="#8f6d2a"/>
+          <text x="60" y="47" font-family="Cinzel,serif" font-size="8" font-weight="600" letter-spacing="1.6" fill="#8f6d2a" text-anchor="middle">TATTOO HOPE</text>
+          <rect x="196" y="70" width="22" height="7" rx="2" fill="#2a251d"/>
+          <rect x="211" y="58" width="5" height="6" rx="1" fill="#ecd28a"/>
+          <rect x="4" y="62" width="3" height="8" rx="1" fill="#a2532c"/>
+          <circle cx="46" cy="77" r="16" fill="#0b0a08"/>
+          <circle cx="182" cy="77" r="16" fill="#0b0a08"/>
+        </symbol>
+      </defs>
+    </svg>
+
+    <button class="s3-pause" type="button" aria-label="Animation anhalten" aria-pressed="false"><span><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M3 2h2v8H3zM7 2h2v8H7z" fill="currentColor"/></svg></span></button>
+
+    <div class="s3-viewport" aria-hidden="true">
+      <div class="s3-tilt">
+        <div class="s3-sway">
+          <div class="s3-floor"></div>
+          <div class="s3-card">
+            <div class="s3-edge"></div>
+            <div class="s3-face"></div>
+
             <!-- 1 Anfrage -->
-            <g class="sc sc1">
-              <rect x="60" y="38" width="72" height="124" rx="13" class="ln"/>
-              <line x1="86" y1="50" x2="106" y2="50" class="ln"/>
-              <g class="pop"><rect x="70" y="70" width="52" height="26" rx="9" class="fl"/><circle cx="84" cy="83" r="2.6" class="dot"/><circle cx="96" cy="83" r="2.6" class="dot"/><circle cx="108" cy="83" r="2.6" class="dot"/></g>
-              <text x="96" y="182" class="cap">Du</text>
-              <path d="M150 100 Q 290 20 400 95" class="trail"/>
-              <g class="env"><g transform="translate(120 72)"><rect width="38" height="26" rx="3" class="fl"/><polyline points="0,2 19,15 38,2" class="ln"/></g></g>
-              <circle cx="445" cy="98" r="40" class="ln"/>
-              <text x="445" y="111" class="mono-big">Ü</text>
-              <text x="445" y="182" class="cap">Ümit</text>
-            </g>
+            <div class="s3-scene" data-s="1" style="--i:0">
+              <svg class="s3-l s3-back" viewBox="0 0 500 216" preserveAspectRatio="xMidYMid slice">
+                <circle cx="360" cy="116" r="80" fill="url(#s3d-glow)"/>
+                <path d="M168 116 Q 262 38 320 112" class="ln-soft" stroke-dasharray="2 6"/>
+              </svg>
+              <svg class="s3-l" viewBox="0 0 500 216" preserveAspectRatio="xMidYMid slice">
+                <rect x="100" y="72" width="60" height="118" rx="12" class="glass"/>
+                <rect x="106" y="80" width="48" height="102" rx="7" fill="#0f0d0a" stroke="rgba(201,162,75,.25)"/>
+                <line x1="122" y1="76" x2="138" y2="76" class="ln" stroke-width="1.2"/>
+                <g class="a s1-typing"><rect x="110" y="92" width="32" height="16" rx="8" fill="#2a251c" stroke="rgba(201,162,75,.6)"/>
+                  <g><circle class="a s1-dot" cx="119" cy="100" r="1.8" fill="#ecd28a"/><circle class="a s1-dot" cx="126" cy="100" r="1.8" fill="#ecd28a"/><circle class="a s1-dot" cx="133" cy="100" r="1.8" fill="#ecd28a"/></g></g>
+                <g class="a s1-sent"><rect x="114" y="116" width="36" height="22" rx="8" class="goldfill"/>
+                  <path d="M120 123 h22 M120 129 h14" stroke="#17130b" stroke-width="1.6" stroke-linecap="round"/>
+                  <path d="M138 131 l2 2 4 -4 M142 131 l2 2 4 -4" stroke="#17130b" stroke-width="1.1" fill="none"/></g>
+                <path d="M168 116 Q 262 38 320 112" class="ln-hi a s1-trail draw" pathLength="1" stroke-dasharray="1 1"/>
+                <text x="130" y="206" class="cap">DU</text>
+                <g class="a s1-medal">
+                  <circle cx="360" cy="116" r="36" fill="url(#s3d-glass)" stroke="url(#s3d-gold)" stroke-width="2"/>
+                  <circle cx="360" cy="116" r="30" fill="none" stroke="rgba(201,162,75,.3)"/>
+                  <text x="360" y="127" class="mark">Ü</text>
+                </g>
+                <circle class="a s1-ring" cx="360" cy="116" r="36" fill="none" stroke="#ecd28a" stroke-width="1.5"/>
+                <text x="360" y="174" class="cap">ÜMIT</text>
+              </svg>
+              <svg class="s3-l s3-front" viewBox="0 0 500 216" preserveAspectRatio="xMidYMid slice">
+                <g class="a s1-env"><g transform="translate(168 112)">
+                  <rect x="-15" y="-10" width="30" height="20" rx="2.5" class="goldfill"/>
+                  <path d="M-15 -8.5 L0 2 L15 -8.5" fill="none" stroke="#17130b" stroke-width="1.4" stroke-linejoin="round"/>
+                </g></g>
+              </svg>
+              <div class="s3-cap"><span class="s3-num">I</span><span class="s3-ttl">Anfrage</span><span class="s3-sub">per WhatsApp oder Instagram</span></div>
+            </div>
+
             <!-- 2 Absprache -->
-            <g class="sc sc2">
-              <g class="b1"><rect x="40" y="30" width="230" height="36" rx="16" class="fl"/><text x="58" y="53" class="msg">Löwe auf dem Unterarm?</text></g>
-              <g class="b2"><rect x="270" y="78" width="230" height="36" rx="16" class="fl gold"/><text x="288" y="101" class="msg dark">Gern! Samstag, 11 Uhr?</text></g>
-              <g class="cal"><rect x="205" y="128" width="130" height="62" rx="8" class="ln"/><rect x="205" y="128" width="130" height="16" rx="8" class="fl gold"/><text x="254" y="173" class="mono">SA · 11:00</text><path d="M300 168 l6 6 l14 -15" class="ln tick"/></g>
-            </g>
+            <div class="s3-scene" data-s="2" style="--i:1">
+              <svg class="s3-l s3-back" viewBox="0 0 500 216" preserveAspectRatio="xMidYMid slice">
+                <circle cx="250" cy="120" r="110" fill="url(#s3d-glow)" opacity=".7"/>
+              </svg>
+              <svg class="s3-l" viewBox="0 0 500 216" preserveAspectRatio="xMidYMid slice">
+                <g class="a s2-b1"><path d="M106 76 H286 Q300 76 300 90 V98 Q300 112 286 112 H112 L100 118 L104 108 Q92 104 92 92 V90 Q92 76 106 76 Z" class="glass"/>
+                  <text x="110" y="99" class="msg">Löwe auf dem Unterarm?</text></g>
+                <g class="a s2-chip"><rect x="138" y="180" width="64" height="18" rx="9" fill="#1d1913" stroke="rgba(201,162,75,.5)"/><text x="170" y="192" class="chip">MOTIV</text></g>
+                <g class="a s2-chip c2"><rect x="218" y="180" width="64" height="18" rx="9" fill="#1d1913" stroke="rgba(201,162,75,.5)"/><text x="250" y="192" class="chip">STELLE</text></g>
+                <g class="a s2-chip c3"><rect x="298" y="180" width="64" height="18" rx="9" fill="#1d1913" stroke="rgba(201,162,75,.5)"/><text x="330" y="192" class="chip">TERMIN</text></g>
+              </svg>
+              <svg class="s3-l s3-front" viewBox="0 0 500 216" preserveAspectRatio="xMidYMid slice">
+                <g class="a s2-b2"><path d="M214 124 H394 Q408 124 408 138 V146 Q408 156 398 159 L404 168 L390 160 H214 Q200 160 200 146 V138 Q200 124 214 124 Z" class="goldfill"/>
+                  <text x="216" y="147" class="msg-d">Gern! Samstag, 11 Uhr?</text></g>
+                <g class="a s2-cal">
+                  <rect x="306" y="16" width="84" height="64" rx="8" class="glass"/>
+                  <path d="M306 32 V24 Q306 16 314 16 H382 Q390 16 390 24 V32 Z" class="goldfill"/>
+                  <line x1="324" y1="12" x2="324" y2="20" class="ln-hi"/><line x1="372" y1="12" x2="372" y2="20" class="ln-hi"/>
+                  <text x="348" y="51" class="mono">SA · 11:00</text>
+                  <path d="M342 64 l4 4 l9 -10" class="ln-hi a s2-tick draw" pathLength="1" stroke-width="2.2"/>
+                </g>
+              </svg>
+              <div class="s3-cap"><span class="s3-num">II</span><span class="s3-ttl">Absprache</span><span class="s3-sub">Motiv, Stelle &amp; Termin</span></div>
+            </div>
+
             <!-- 3 Anfahrt -->
-            <g class="sc sc3">
-              <g class="city"><polyline points="0,150 30,150 30,96 64,96 64,150 80,150 80,74 112,74 112,150 128,150 128,110 168,110 168,150 360,150 360,104 388,104 388,82 410,82 410,150 430,150 430,62 470,62 470,150 488,150 488,118 540,118" class="ln"/></g>
-              <line x1="0" y1="174" x2="540" y2="174" class="ln road"/>
-              <g class="drive"><g class="van" transform="translate(170 0)">
-                <rect x="10" y="104" width="160" height="58" rx="9" class="fl"/>
-                <path d="M170 116 h22 l18 20 v26 h-40 z" class="fl"/>
-                <rect x="176" y="121" width="16" height="15" rx="2" class="ln"/>
-                <rect x="26" y="114" width="34" height="18" rx="3" class="ln"/>
-                <rect x="70" y="114" width="34" height="18" rx="3" class="ln"/>
-                <text x="66" y="151" class="vantext">TATTOO HOPE</text>
-                <g class="wheel"><circle cx="48" cy="164" r="12" class="whl"/><line x1="36" y1="164" x2="60" y2="164" class="ln"/></g>
-                <g class="wheel"><circle cx="172" cy="164" r="12" class="whl"/><line x1="160" y1="164" x2="184" y2="164" class="ln"/></g>
-              </g></g>
-            </g>
+            <div class="s3-scene" data-s="3" style="--i:2">
+              <svg class="s3-l s3-back" viewBox="0 0 500 216" preserveAspectRatio="xMidYMid slice">
+                <g class="a s3-sky">
+                  <g fill="#15120d" stroke="rgba(201,162,75,.38)" stroke-width="1">
+                    <rect x="0" y="122" width="40" height="70"/><rect x="44" y="92" width="30" height="100"/><rect x="78" y="132" width="50" height="60"/>
+                    <rect x="132" y="72" width="26" height="120"/><rect x="162" y="108" width="44" height="84"/><rect x="210" y="134" width="34" height="58"/>
+                    <rect x="248" y="96" width="60" height="96"/><rect x="312" y="62" width="28" height="130"/><rect x="344" y="120" width="46" height="72"/>
+                    <rect x="394" y="88" width="36" height="104"/><rect x="434" y="128" width="54" height="64"/><rect x="492" y="80" width="30" height="112"/>
+                    <rect x="526" y="112" width="48" height="80"/><rect x="578" y="96" width="40" height="96"/>
+                  </g>
+                  <g fill="#c9a24b" opacity=".55">
+                    <rect x="50" y="102" width="4" height="5"/><rect x="62" y="118" width="4" height="5"/><rect x="138" y="84" width="4" height="5"/><rect x="146" y="110" width="4" height="5"/>
+                    <rect x="256" y="108" width="4" height="5"/><rect x="290" y="124" width="4" height="5"/><rect x="318" y="76" width="4" height="5"/><rect x="326" y="104" width="4" height="5"/>
+                    <rect x="402" y="100" width="4" height="5"/><rect x="414" y="130" width="4" height="5"/><rect x="498" y="92" width="4" height="5"/><rect x="586" y="110" width="4" height="5"/>
+                  </g>
+                </g>
+                <g class="a s3-pin"><g transform="translate(400 70)">
+                  <ellipse cx="0" cy="2" rx="7" ry="2" fill="rgba(236,210,138,.35)"/>
+                  <path d="M0 0 C -6 -9 -10 -14 -10 -20 A10 10 0 1 1 10 -20 C10 -14 6 -9 0 0 Z" class="goldfill"/>
+                  <circle cx="0" cy="-20" r="3.6" fill="#17130b"/>
+                </g></g>
+              </svg>
+              <svg class="s3-l" viewBox="0 0 500 216" preserveAspectRatio="xMidYMid slice">
+                <rect x="0" y="192" width="500" height="24" fill="url(#s3d-road)"/>
+                <line x1="0" y1="192" x2="500" y2="192" stroke="rgba(201,162,75,.55)" stroke-width="1.2"/>
+                <g class="a s3-dash"><line x1="0" y1="205" x2="1100" y2="205" stroke="rgba(236,210,138,.45)" stroke-width="2" stroke-dasharray="20 28"/></g>
+                <g class="a s3-drive"><g transform="translate(145 103)">
+                  <ellipse cx="110" cy="89" rx="112" ry="5" fill="url(#s3d-shadow)"/>
+                  <path class="a s3-beam" d="M216 58 L330 40 L330 86 L216 64 Z" fill="url(#s3d-beam)"/>
+                  <use href="#s3d-van" x="0" y="0" width="220" height="90"/>
+                  <g transform="translate(46 77)"><g class="a s3-wheel"><circle r="12.5" fill="#100e0b" stroke="#3b342a" stroke-width="3"/><circle r="6.5" fill="#6b5a36" stroke="#c9a24b" stroke-width=".8"/><path d="M-6 0 H6 M-3 -5.2 L3 5.2 M-3 5.2 L3 -5.2" stroke="#17130b" stroke-width="1.4"/></g></g>
+                  <g transform="translate(182 77)"><g class="a s3-wheel"><circle r="12.5" fill="#100e0b" stroke="#3b342a" stroke-width="3"/><circle r="6.5" fill="#6b5a36" stroke="#c9a24b" stroke-width=".8"/><path d="M-6 0 H6 M-3 -5.2 L3 5.2 M-3 5.2 L3 -5.2" stroke="#17130b" stroke-width="1.4"/></g></g>
+                </g></g>
+              </svg>
+              <svg class="s3-l s3-front" viewBox="0 0 500 216" preserveAspectRatio="xMidYMid slice">
+                <g class="a s3-posts" opacity=".6">
+                  <g class="ln" stroke-width="1.4">
+                    <path d="M120 214 V112 q0 -8 10 -8 h6"/><path d="M300 214 V112 q0 -8 10 -8 h6"/><path d="M480 214 V112 q0 -8 10 -8 h6"/>
+                    <path d="M660 214 V112 q0 -8 10 -8 h6"/><path d="M840 214 V112 q0 -8 10 -8 h6"/>
+                  </g>
+                  <g fill="#ecd28a"><circle cx="138" cy="106" r="2.5"/><circle cx="318" cy="106" r="2.5"/><circle cx="498" cy="106" r="2.5"/><circle cx="678" cy="106" r="2.5"/><circle cx="858" cy="106" r="2.5"/></g>
+                </g>
+              </svg>
+              <div class="s3-cap"><span class="s3-num">III</span><span class="s3-ttl">Anfahrt</span><span class="s3-sub">Das Tattoo-Mobil kommt in deine Stadt</span></div>
+            </div>
+
             <!-- 4 Einsteigen -->
-            <g class="sc sc4">
-              <g transform="translate(170 0)">
-                <rect x="10" y="104" width="160" height="58" rx="9" class="fl"/>
-                <path d="M170 116 h22 l18 20 v26 h-40 z" class="fl"/>
-                <rect x="176" y="121" width="16" height="15" rx="2" class="ln"/>
-                <rect x="26" y="114" width="34" height="18" rx="3" class="ln"/>
-                <rect x="70" y="114" width="34" height="18" rx="3" class="ln"/>
-                <circle cx="48" cy="164" r="12" class="whl"/>
-                <circle cx="172" cy="164" r="12" class="whl"/>
-                <rect x="118" y="112" width="24" height="48" class="doorway"/>
-                <rect x="118" y="112" width="24" height="48" class="door"/>
-              </g>
-              <g class="walker"><g transform="translate(400 0)"><circle cx="0" cy="104" r="9" class="ln"/><line x1="0" y1="113" x2="0" y2="142" class="ln"/><polyline points="-11,128 0,120 11,128" class="ln"/><polyline points="-9,166 0,142 9,166" class="ln"/></g></g>
-            </g>
-            <!-- 5 Tätowieren, fertig -->
-            <g class="sc sc5">
-              <rect x="40" y="104" width="300" height="50" rx="25" class="ln"/>
-              <path d="M150 129 c 10 -18 30 -18 36 0 c 6 18 26 18 36 0 c 10 -18 30 -18 36 0" class="ink"/>
-              <g class="machine"><g transform="translate(262 52) rotate(28)"><rect x="-7" y="0" width="14" height="52" rx="5" class="fl gold"/><line x1="0" y1="52" x2="0" y2="66" class="ln"/><rect x="-11" y="10" width="22" height="9" rx="3" class="ln"/></g></g>
-              <circle cx="452" cy="104" r="40" class="ln"/>
-              <path d="M432 105 l14 14 l28 -30" class="check"/>
-              <text x="452" y="182" class="cap">Fertig</text>
-            </g>
-          </svg>
-          <ol class="steps-mini" aria-hidden="true">
-            <li><span>Anfrage</span><b>Anfrage</b></li>
-            <li><span>Absprache</span><b>Absprache</b></li>
-            <li><span>Anfahrt</span><b>Anfahrt</b></li>
-            <li><span>Einsteigen</span><b>Einsteigen</b></li>
-            <li><span>Fertig</span><b>Fertig</b></li>
-          </ol>
-        </figure>
+            <div class="s3-scene" data-s="4" style="--i:3">
+              <svg class="s3-l s3-back" viewBox="0 0 500 216" preserveAspectRatio="xMidYMid slice">
+                <circle cx="276" cy="140" r="96" fill="url(#s3d-glow)"/>
+              </svg>
+              <svg class="s3-l" viewBox="0 0 500 216" preserveAspectRatio="xMidYMid slice">
+                <rect x="0" y="192" width="500" height="24" fill="url(#s3d-road)"/>
+                <line x1="0" y1="192" x2="500" y2="192" stroke="rgba(201,162,75,.55)" stroke-width="1.2"/>
+                <path class="a s4-light" d="M263 172 H287 L344 206 H236 Z" fill="url(#s3d-spill)"/>
+                <g transform="translate(145 103)">
+                  <ellipse cx="110" cy="89" rx="112" ry="5" fill="url(#s3d-shadow)"/>
+                  <use href="#s3d-van" x="0" y="0" width="220" height="90"/>
+                  <g transform="translate(46 77)"><circle r="12.5" fill="#100e0b" stroke="#3b342a" stroke-width="3"/><circle r="6.5" fill="#6b5a36" stroke="#c9a24b" stroke-width=".8"/></g>
+                  <g transform="translate(182 77)"><circle r="12.5" fill="#100e0b" stroke="#3b342a" stroke-width="3"/><circle r="6.5" fill="#6b5a36" stroke="#c9a24b" stroke-width=".8"/></g>
+                  <rect class="a s4-light" x="118.5" y="14.5" width="23" height="51" fill="#ecd28a"/>
+                  <rect class="a s4-win" x="20" y="15" width="34" height="18" rx="3" fill="#ecd28a"/>
+                  <rect class="a s4-win" x="64" y="15" width="34" height="18" rx="3" fill="#ecd28a"/>
+                  <rect class="a s4-door" x="118" y="14" width="24" height="52" rx="2" fill="url(#s3d-white)" stroke="#a69c86" stroke-width="1"/>
+                  <rect x="116" y="67" width="28" height="4" rx="1" fill="#3b342a"/>
+                </g>
+              </svg>
+              <svg class="s3-l s3-front" viewBox="0 0 500 216" preserveAspectRatio="xMidYMid slice">
+                <g class="a s4-walk"><g transform="translate(400 192)"><g class="a s4-step">
+                  <circle cx="0" cy="-50" r="6" class="ln-hi"/>
+                  <path d="M0 -43 V-20 M-8 -31 L0 -38 L8 -31 M-7 0 L0 -20 L7 0" class="ln-hi"/>
+                </g></g></g>
+              </svg>
+              <div class="s3-cap"><span class="s3-num">IV</span><span class="s3-ttl">Einsteigen</span><span class="s3-sub">Dein Studio parkt vor der Tür</span></div>
+            </div>
+
+            <!-- 5 Tätowieren -> Fertig -->
+            <div class="s3-scene" data-s="5" style="--i:4">
+              <svg class="s3-l s3-back" viewBox="0 0 500 216" preserveAspectRatio="xMidYMid slice">
+                <circle cx="375" cy="128" r="80" fill="url(#s3d-glow)"/>
+              </svg>
+              <svg class="s3-l" viewBox="0 0 500 216" preserveAspectRatio="xMidYMid slice">
+                <rect x="92" y="118" width="232" height="64" rx="32" class="glass"/>
+                <path d="M110 130 Q 210 122 312 132" stroke="rgba(236,210,138,.12)" stroke-width="3" fill="none" stroke-linecap="round"/>
+                <circle class="a s5-shade" cx="200" cy="150" r="26" fill="url(#s3d-shade)"/>
+                <g transform="translate(200 150) scale(1.15)">
+                  <path class="a s5-lion draw" pathLength="1" fill="none" stroke="#ecd28a" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"
+                    d="M0 -21 A8 8 0 0 1 12.3 -17 A8 8 0 0 1 20 -6.5 A8 8 0 0 1 20 6.5 A8 8 0 0 1 12.3 17 A8 8 0 0 1 0 21 A8 8 0 0 1 -12.3 17 A8 8 0 0 1 -20 6.5 A8 8 0 0 1 -20 -6.5 A8 8 0 0 1 -12.3 -17 A8 8 0 0 1 0 -21 M-9 -9 Q0 -15 9 -9 Q12 2 6 10 Q0 15 -6 10 Q-12 2 -9 -9 M-6 -3 L-2 -2 M6 -3 L2 -2 M-3 3 L3 3 L0 7 Z M0 7 V9 M-4 10 Q-2 12 0 9 Q2 12 4 10"/>
+                </g>
+                <circle cx="375" cy="128" r="34" fill="url(#s3d-glass)"/>
+                <circle class="a s5-circ draw" cx="375" cy="128" r="34" pathLength="1" fill="none" stroke="url(#s3d-gold)" stroke-width="2.2" transform="rotate(-90 375 128)"/>
+                <path class="a s5-check draw" d="M360 129 l10 10 l20 -22" pathLength="1" fill="none" stroke="#ecd28a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <text class="a s5-done cap" x="375" y="188">FERTIG</text>
+              </svg>
+              <svg class="s3-l s3-front" viewBox="0 0 500 216" preserveAspectRatio="xMidYMid slice">
+                <g class="a s5-mach"><g transform="rotate(32)">
+                  <circle class="a s5-tip" cx="0" cy="0" r="4" fill="#ecd28a" opacity=".5"/>
+                  <path d="M0 0 V-10" stroke="#ecd28a" stroke-width="1.2"/>
+                  <path d="M-4 -10 H4 L5.5 -36 H-5.5 Z" fill="#2a251c" stroke="#c9a24b" stroke-width="1"/>
+                  <rect x="-7" y="-64" width="14" height="30" rx="5" class="goldfill"/>
+                  <path d="M-7 -52 H7 M-7 -46 H7" stroke="#8f6d2a" stroke-width="1"/>
+                  <path d="M0 -64 q4 -10 14 -12" fill="none" stroke="rgba(201,162,75,.6)" stroke-width="1.2"/>
+                </g></g>
+                <g stroke="#ecd28a" stroke-width="2" stroke-linecap="round">
+                  <g transform="translate(375 128) rotate(-90)"><line class="a s5-ray" x1="44" y1="0" x2="52" y2="0"/></g>
+                  <g transform="translate(375 128) rotate(-45)"><line class="a s5-ray" x1="44" y1="0" x2="52" y2="0"/></g>
+                  <g transform="translate(375 128) rotate(0)"><line class="a s5-ray" x1="44" y1="0" x2="52" y2="0"/></g>
+                  <g transform="translate(375 128) rotate(45)"><line class="a s5-ray" x1="44" y1="0" x2="52" y2="0"/></g>
+                  <g transform="translate(375 128) rotate(135)"><line class="a s5-ray" x1="44" y1="0" x2="52" y2="0"/></g>
+                  <g transform="translate(375 128) rotate(180)"><line class="a s5-ray" x1="44" y1="0" x2="52" y2="0"/></g>
+                  <g transform="translate(375 128) rotate(225)"><line class="a s5-ray" x1="44" y1="0" x2="52" y2="0"/></g>
+                </g>
+              </svg>
+              <div class="s3-cap"><span class="s3-num">V</span><span class="s3-ttl">Tätowieren</span><span class="s3-sub">… und fertig ist dein Unikat</span></div>
+            </div>
+
+            <div class="s3-dust">
+              <i style="left:14%;top:30%;--z:-30px;--t:9s;--dl:-2s"></i>
+              <i style="left:28%;top:72%;--z:60px;--t:11s;--dl:-6s;--o:.5"></i>
+              <i style="left:47%;top:20%;--z:20px;--t:8s;--dl:-1s"></i>
+              <i style="left:63%;top:66%;--z:-10px;--t:10s;--dl:-4s;--o:.6"></i>
+              <i style="left:79%;top:36%;--z:70px;--t:12s;--dl:-8s;--o:.45"></i>
+              <i style="left:90%;top:78%;--z:30px;--t:9.5s;--dl:-3s"></i>
+              <i style="left:6%;top:84%;--z:50px;--t:10.5s;--dl:-7s;--o:.5"></i>
+            </div>
+
+            <div class="s3-glass"><div class="s3-spec"></div><div class="s3-sweep"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <ol class="s3-steps" aria-hidden="true">
+      <li data-s="1" style="--i:0"><span>Anfrage</span><b>Anfrage</b></li>
+      <li data-s="2" style="--i:1"><span>Absprache</span><b>Absprache</b></li>
+      <li data-s="3" style="--i:2"><span>Anfahrt</span><b>Anfahrt</b></li>
+      <li data-s="4" style="--i:3"><span>Einsteigen</span><b>Einsteigen</b></li>
+      <li data-s="5" style="--i:4"><span>Fertig</span><b>Fertig</b></li>
+    </ol>
+  </figure>
         <p class="lead">Ümit tätowiert seit 2013, mit Basis in Wuppertal. Heute fährt das Studio mit: ein selbst umgebautes Wohnmobil, das deutschlandweit unterwegs ist. Black &amp; Grey, Realistik, Coverups und Fine Line, als Unikat für dich gezeichnet.</p>
         <div class="btns">
           <a class="btn solid" href="https://wa.me/491785776262" target="_blank" rel="noopener">Termin per WhatsApp</a>
@@ -757,10 +1129,6 @@ footer a{display:inline-block;padding:12px 4px}
 (function(){
   const RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
 
-  // Pause-Knopf für die Ablauf-Animation
-  const story=document.querySelector('.story'),pb=document.getElementById('storyPause');
-  pb.addEventListener('click',()=>{const p=story.classList.toggle('paused');pb.setAttribute('aria-pressed',p);pb.setAttribute('aria-label',p?'Animation fortsetzen':'Animation anhalten');pb.innerHTML=p?'<svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M3 2l7 4-7 4z" fill="currentColor"/></svg>':'<svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M3 2h2v8H3zM7 2h2v8H7z" fill="currentColor"/></svg>';});
-
   // Header schrumpft, Goldlinie zeigt Fortschritt, Parallax am Hero-Bild
   const top=document.querySelector('.top'),bar=top.querySelector('.progress');
   const hp=document.querySelector('.hero-pic .frame');
@@ -791,6 +1159,45 @@ footer a{display:inline-block;padding:12px 4px}
   document.querySelectorAll('a.fact b').forEach(b=>{const txt=b.textContent,to=+txt.replace(/\D/g,''),suf=txt.replace(/[\d.\s]/g,'');if(!to)return;
     const o=new IntersectionObserver(([e])=>{if(!e.isIntersecting)return;o.disconnect();const t0=performance.now();
       (function f(t){const p=Math.min((t-t0)/1600,1),v=Math.round(to*(1-Math.pow(1-p,3)));b.textContent=v.toLocaleString('de-DE')+(p<1?'':suf);if(p<1)requestAnimationFrame(f)})(t0)});o.observe(b)});
+})();
+
+/* Story 3D: Pause, Maus-Tilt, Pause außerhalb des Sichtfelds */
+(function(){
+  var root=document.querySelector('.story3d');if(!root)return;
+  var RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var btn=root.querySelector('.s3-pause'),tilt=root.querySelector('.s3-tilt'),spec=root.querySelector('.s3-spec');
+  var ICON_PAUSE='<span><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M3 2h2v8H3zM7 2h2v8H7z" fill="currentColor"/></svg></span>';
+  var ICON_PLAY='<span><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M3.5 2l6.5 4-6.5 4z" fill="currentColor"/></svg></span>';
+  btn.addEventListener('click',function(){
+    var p=root.classList.toggle('is-paused');
+    btn.setAttribute('aria-pressed',p);
+    btn.setAttribute('aria-label',p?'Animation fortsetzen':'Animation anhalten');
+    btn.innerHTML=p?ICON_PLAY:ICON_PAUSE;
+  });
+  if(RM)return;
+
+  // Nur animieren, wenn sichtbar (Akku/Performance)
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(e){root.classList.toggle('is-off',!e[0].isIntersecting)}).observe(root);
+  }
+
+  // Maus-Tilt (nur Geräte mit echtem Zeiger)
+  if(!matchMedia('(hover:hover) and (pointer:fine)').matches)return;
+  var tx=0,ty=0,cx=0,cy=0,raf=0;
+  function loop(){
+    cx+=(tx-cx)*.08;cy+=(ty-cy)*.08;
+    tilt.style.transform='rotateX('+(9-cy*7).toFixed(2)+'deg) rotateY('+(cx*11).toFixed(2)+'deg)';
+    spec.style.transform='translate3d('+(cx*55).toFixed(1)+'%,'+(cy*40).toFixed(1)+'%,0)';
+    if(Math.abs(tx-cx)>.001||Math.abs(ty-cy)>.001){raf=requestAnimationFrame(loop)}else{raf=0}
+  }
+  function kick(){if(!raf)raf=requestAnimationFrame(loop)}
+  root.addEventListener('pointermove',function(e){
+    var r=root.getBoundingClientRect();
+    tx=Math.max(-1,Math.min(1,((e.clientX-r.left)/r.width-.5)*2));
+    ty=Math.max(-1,Math.min(1,((e.clientY-r.top)/r.height-.5)*2));
+    kick();
+  });
+  root.addEventListener('pointerleave',function(){tx=0;ty=0;kick()});
 })();
 </script>
 </body>
