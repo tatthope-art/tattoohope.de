@@ -152,6 +152,18 @@ section{padding-block:88px}
 .work.wide img{aspect-ratio:8/5}
 @media (max-width:860px){.gallery{grid-template-columns:1fr 1fr}.work.wide{grid-column:span 2}}
 @media (max-width:480px){.gallery{grid-template-columns:1fr}.work.wide{grid-column:auto}.work.wide img{aspect-ratio:4/5}}
+/* Galerie 2026-11-21: Video, Vorher/Nachher, "Alle zeigen" */
+.gallery{grid-auto-flow:dense}
+.work.fit img{object-fit:contain;object-position:center;background:var(--ink)}
+.work.fit:hover img{filter:none}
+.work video{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;background:var(--ink)}
+.work .play{position:absolute;top:12px;right:12px;width:38px;height:38px;display:grid;place-items:center;border:1px solid var(--gold);border-radius:50%;background:rgba(11,10,8,.65);color:var(--gold-hi);font-size:.8rem;padding-left:2px;pointer-events:none}
+.gallery .work.more{display:none}
+.gallery.all .work.more{display:block}
+.more-wrap{display:flex;justify-content:center;margin-top:28px}
+.gallery.all + .more-wrap{display:none}
+.lb video{max-height:82vh;max-width:100%;width:auto;border:1px solid var(--gold);background:#000}
+@media (max-width:760px){.lb video{max-height:72vh}}
 .styles{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
 .styles span{font:400 .74rem/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line);color:var(--gold-hi);padding:9px 12px;border-radius:2px}
 
@@ -913,16 +925,37 @@ footer a{display:inline-block;padding:12px 4px}
         <p>Eine Auswahl aus den letzten Monaten. Antippen zum Vergrößern. Mehr gibt es täglich auf Instagram.</p>
       </div>
       <div class="gallery" id="gallery">
-        <button class="work wide" data-i="0"><img src="img/loewe.jpg" alt="Großer realistischer Löwenkopf auf dem Oberarm" loading="lazy" width="640" height="1136"><div class="cap"><b>Löwenkopf</b><i>Realistik</i></div></button>
-        <button class="work" data-i="1"><img src="img/engel.jpg" alt="Drei Putten-Engel, Black and Grey, auf dem Oberarm" loading="lazy" width="320" height="568"><div class="cap"><b>Engel</b><i>Black &amp; Grey</i></div></button>
-        <button class="work" data-i="2"><img src="img/adler_coverup.jpg" alt="Adler-Tattoo als Coverup auf dem Unterarm" loading="lazy" width="640" height="1136"><div class="cap"><b>Adler</b><i>Coverup</i></div></button>
-        <button class="work" data-i="3"><img src="img/blumen_sleeve.jpg" alt="Blumen-Sleeve mit Rosen und Mandala auf dem Unterarm" loading="lazy" width="640" height="1136"><div class="cap"><b>Blumen-Sleeve</b><i>Floral</i></div></button>
-        <button class="work" data-i="4"><img src="img/loewe_unterarm.jpg" alt="Löwe auf dem Unterarm" loading="lazy" width="640" height="1136"><div class="cap"><b>Löwe</b><i>Unterarm</i></div></button>
-        <button class="work" data-i="5"><img src="img/adler_uhr.jpg" alt="Adler mit Taschenuhr am Oberarm" loading="lazy" width="640" height="1136"><div class="cap"><b>Adler &amp; Uhr</b><i>Oberarm</i></div></button>
-        <button class="work" data-i="6"><img src="img/blumen_arm.jpg" alt="Blumen-Tattoo am Unterarm" loading="lazy" width="640" height="1136"><div class="cap"><b>Blüten</b><i>Floral</i></div></button>
-        <button class="work" data-i="7"><img src="img/feine_blumen.jpg" alt="Feine Blumenranke auf dem Rücken" loading="lazy" width="640" height="1136"><div class="cap"><b>Blumenranke</b><i>Fine Line</i></div></button>
-        <button class="work wide" data-i="8"><img src="img/portrait.jpg" alt="Portrait-Tattoo nach einem Foto, daneben die Vorlage" loading="lazy" width="640" height="1136" style="object-position:center 30%"><div class="cap"><b>Portrait nach Foto</b><i>Realistik</i></div></button>
+        <button class="work wide" data-i="0" data-full="img/loewe.jpg"><img src="img/loewe.jpg" alt="Großer realistischer Löwenkopf auf dem Oberarm" loading="lazy" width="640" height="1136"><div class="cap"><b>Löwenkopf</b><i>Realistik</i></div></button>
+        <button class="work" data-i="1" data-full="img/arbeiten/engel_l.jpg"><img src="img/arbeiten/engel_s.jpg" alt="Drei Putten-Engel in Black and Grey auf dem Oberarm" loading="lazy" width="720" height="960"><div class="cap"><b>Engel</b><i>Black &amp; Grey</i></div></button>
+        <button class="work video " data-i="2" data-video="img/arbeiten/aegypten_sleeve.mp4" aria-label="Video: Ägypten-Sleeve mit Pharaonen, Pyramiden und Ankh auf dem Arm"><video muted loop playsinline preload="none" poster="img/arbeiten/aegypten_sleeve_poster.jpg" aria-hidden="true"><source src="img/arbeiten/aegypten_sleeve.mp4" type="video/mp4"></video><img src="img/arbeiten/aegypten_sleeve_poster.jpg" alt="Video: Ägypten-Sleeve mit Pharaonen, Pyramiden und Ankh auf dem Arm" hidden><span class="play" aria-hidden="true">▶</span><div class="cap"><b>Ägypten-Sleeve</b><i>Video</i></div></button>
+        <button class="work wide fit" data-i="3" data-full="img/arbeiten/narben_coverup_l.jpg"><img src="img/arbeiten/narben_coverup_s.jpg" alt="Vorher-Nachher: Eine große Bauchnarbe, überdeckt mit einem Kirschblüten-Tattoo" loading="lazy" width="720" height="590"><div class="cap"><b>Narben-Coverup</b><i>Vorher · Nachher</i></div></button>
+        <button class="work" data-i="4" data-full="img/arbeiten/tiger_l.jpg"><img src="img/arbeiten/tiger_s.jpg" alt="Realistischer Tigerkopf in Black and Grey" loading="lazy" width="659" height="1432"><div class="cap"><b>Tiger</b><i>Realistik</i></div></button>
+        <button class="work" data-i="5" data-full="img/arbeiten/joker_l.jpg"><img src="img/arbeiten/joker_s.jpg" alt="Portrait-Tattoo des Jokers auf dem Unterarm" loading="lazy" width="720" height="1450"><div class="cap"><b>Joker</b><i>Portrait</i></div></button>
+        <button class="work" data-i="6" data-full="img/arbeiten/loewe_elefant_l.jpg"><img src="img/arbeiten/loewe_elefant_s.jpg" alt="Brüllender Löwe und Elefant vor Sonnenuntergang auf dem Unterarm" loading="lazy" width="720" height="1565"><div class="cap"><b>Löwe &amp; Elefant</b><i>Unterarm</i></div></button>
+        <button class="work" data-i="7" data-full="img/arbeiten/schiff_l.jpg"><img src="img/arbeiten/schiff_s.jpg" alt="Segelschiff im Sturm vor einem Leuchtturm, Black and Grey" loading="lazy" width="720" height="1310"><div class="cap"><b>Schiff &amp; Leuchtturm</b><i>Black &amp; Grey</i></div></button>
+        <button class="work" data-i="8" data-full="img/arbeiten/kompass_l.jpg"><img src="img/arbeiten/kompass_s.jpg" alt="Kompass mit Ornamenten auf dem Unterarm" loading="lazy" width="720" height="1279"><div class="cap"><b>Kompass</b><i>Sleeve</i></div></button>
+        <button class="work" data-i="9" data-full="img/arbeiten/betende_haende_l.jpg"><img src="img/arbeiten/betende_haende_s.jpg" alt="Betende Hände mit Rosenkranz und Taube auf dem Unterarm" loading="lazy" width="720" height="1415"><div class="cap"><b>Betende Hände</b><i>Black &amp; Grey</i></div></button>
+        <button class="work" data-i="10" data-full="img/arbeiten/phoenix_coverup_l.jpg"><img src="img/arbeiten/phoenix_coverup_s.jpg" alt="Phönix als Coverup auf dem Unterarm" loading="lazy" width="720" height="1280"><div class="cap"><b>Phönix</b><i>Coverup</i></div></button>
+        <button class="work wide" data-i="11" data-full="img/portrait.jpg"><img src="img/portrait.jpg" alt="Portrait-Tattoo nach einem Foto, daneben die Vorlage" loading="lazy" width="640" height="1138"><div class="cap"><b>Portrait nach Foto</b><i>Realistik</i></div></button>
+        <button class="work wide fit more" data-i="12" data-full="img/arbeiten/batman_coverup_l.jpg"><img src="img/arbeiten/batman_coverup_s.jpg" alt="Vorher-Nachher: Altes Tattoo am unteren Rücken, überdeckt mit einem Batman-Logo mit Skyline" loading="lazy" width="720" height="720"><div class="cap"><b>Batman</b><i>Coverup · Vorher/Nachher</i></div></button>
+        <button class="work fit more" data-i="13" data-full="img/arbeiten/skorpion_coverup_l.jpg"><img src="img/arbeiten/skorpion_coverup_s.jpg" alt="Vorher-Nachher: Altes Handtattoo, überdeckt mit einem Skorpion" loading="lazy" width="720" height="720"><div class="cap"><b>Skorpion</b><i>Coverup · Vorher/Nachher</i></div></button>
+        <button class="work more" data-i="14" data-full="img/arbeiten/engel_krieger_l.jpg"><img src="img/arbeiten/engel_krieger_s.jpg" alt="Geflügelter Krieger mit Schwert und Uhren auf dem Unterschenkel, daneben die Vorlage" loading="lazy" width="720" height="1280"><div class="cap"><b>Engel-Krieger &amp; Uhr</b><i>Black &amp; Grey</i></div></button>
+        <button class="work more" data-i="15" data-full="img/arbeiten/gedenk_krieger_l.jpg"><img src="img/arbeiten/gedenk_krieger_s.jpg" alt="Krieger mit Flügeln und Datum als Gedenk-Tattoo auf dem Unterarm" loading="lazy" width="720" height="960"><div class="cap"><b>Krieger</b><i>Gedenk-Tattoo</i></div></button>
+        <button class="work more" data-i="16" data-full="img/arbeiten/drache_l.jpg"><img src="img/arbeiten/drache_s.jpg" alt="Asiatischer Drache mit roten Akzenten auf dem Unterarm" loading="lazy" width="720" height="1200"><div class="cap"><b>Drache</b><i>Fine Line</i></div></button>
+        <button class="work more" data-i="17" data-full="img/arbeiten/chrysantheme_l.jpg"><img src="img/arbeiten/chrysantheme_s.jpg" alt="Chrysantheme mit römischem Datum auf dem Unterarm" loading="lazy" width="720" height="1200"><div class="cap"><b>Chrysantheme</b><i>Floral</i></div></button>
+        <button class="work more" data-i="18" data-full="img/arbeiten/spartaner_l.jpg"><img src="img/arbeiten/spartaner_s.jpg" alt="Spartaner-Helm über dem Kolosseum mit römischen Ziffern" loading="lazy" width="720" height="1200"><div class="cap"><b>Spartaner &amp; Kolosseum</b><i>Unterarm</i></div></button>
+        <button class="work more" data-i="19" data-full="img/arbeiten/phoenix_bein_l.jpg"><img src="img/arbeiten/phoenix_bein_s.jpg" alt="Großer Phönix auf dem Oberschenkel" loading="lazy" width="720" height="960"><div class="cap"><b>Phönix</b><i>Bein</i></div></button>
+        <button class="work more" data-i="20" data-full="img/arbeiten/rose_hand_l.jpg"><img src="img/arbeiten/rose_hand_s.jpg" alt="Realistische Rose auf dem Handrücken" loading="lazy" width="720" height="1251"><div class="cap"><b>Rose</b><i>Handrücken</i></div></button>
+        <button class="work more" data-i="21" data-full="img/arbeiten/batman_l.jpg"><img src="img/arbeiten/batman_s.jpg" alt="Batman-Motiv auf dem Unterarm" loading="lazy" width="720" height="1138"><div class="cap"><b>Batman</b><i>Black &amp; Grey</i></div></button>
+        <button class="work more" data-i="22" data-full="img/arbeiten/anime_sleeve_l.jpg"><img src="img/arbeiten/anime_sleeve_s.jpg" alt="Anime-Panels mit Augen-Motiven auf dem Unterarm" loading="lazy" width="720" height="1279"><div class="cap"><b>Anime-Sleeve</b><i>Unterarm</i></div></button>
+        <button class="work more" data-i="23" data-full="img/arbeiten/loewe_rose_l.jpg"><img src="img/arbeiten/loewe_rose_s.jpg" alt="Löwe, Schriftzug und Rose auf Unterarm und Hand" loading="lazy" width="720" height="960"><div class="cap"><b>Löwe &amp; Rose</b><i>Unterarm</i></div></button>
+        <button class="work more" data-i="24" data-full="img/arbeiten/ornament_hand_l.jpg"><img src="img/arbeiten/ornament_hand_s.jpg" alt="Ornamentales Tattoo auf Hand und Fingern" loading="lazy" width="720" height="960"><div class="cap"><b>Ornamentik</b><i>Hand</i></div></button>
+        <button class="work more" data-i="25" data-full="img/adler_uhr.jpg"><img src="img/adler_uhr.jpg" alt="Adler mit Taschenuhr am Oberarm" loading="lazy" width="640" height="1136"><div class="cap"><b>Adler &amp; Uhr</b><i>Oberarm</i></div></button>
+        <button class="work more" data-i="26" data-full="img/blumen_sleeve.jpg"><img src="img/blumen_sleeve.jpg" alt="Blumen-Sleeve mit Rosen und Mandala auf dem Unterarm" loading="lazy" width="640" height="1136"><div class="cap"><b>Blumen-Sleeve</b><i>Floral</i></div></button>
+        <button class="work more" data-i="27" data-full="img/feine_blumen.jpg"><img src="img/feine_blumen.jpg" alt="Feine Blumenranke auf dem Rücken" loading="lazy" width="640" height="1136"><div class="cap"><b>Blumenranke</b><i>Fine Line</i></div></button>
+        <button class="work more" data-i="28" data-full="img/arbeiten/schriftzug_l.jpg"><img src="img/arbeiten/schriftzug_s.jpg" alt="Schriftzug mit Halbmond, Stern und Doppeladler auf dem Unterarm" loading="lazy" width="720" height="895"><div class="cap"><b>Schriftzug</b><i>Lettering</i></div></button>
       </div>
+      <div class="more-wrap"><button class="btn ghost" id="moreBtn" type="button" aria-expanded="false" aria-controls="gallery">Alle 29 Arbeiten zeigen</button></div>
       <div class="styles" aria-label="Stilrichtungen">
         <span>Black &amp; Grey</span><span>Realistik</span><span>Portraits</span><span>Coverups</span><span>Floral</span><span>Fine Line</span><span>Custom Designs</span>
       </div>
@@ -1089,7 +1122,7 @@ footer a{display:inline-block;padding:12px 4px}
 <div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-labelledby="lbCap">
   <button class="x" id="lbX" aria-label="Schließen">×</button>
   <button class="prev" id="lbP" aria-label="Vorheriges Bild">‹</button>
-  <figure><img id="lbImg" alt=""><figcaption id="lbCap" aria-live="polite"></figcaption></figure>
+  <figure><img id="lbImg" alt=""><video id="lbVid" controls playsinline loop muted hidden></video><figcaption id="lbCap" aria-live="polite"></figcaption></figure>
   <button class="next" id="lbN" aria-label="Nächstes Bild">›</button>
 </div>
 
@@ -1100,9 +1133,21 @@ footer a{display:inline-block;padding:12px 4px}
   let cur=0,last=null;
   const bg=[...document.querySelectorAll('body > header, body > main, body > footer')];
   const btns=[...lb.querySelectorAll('button')];
-  function show(i){cur=(i+works.length)%works.length;const w=works[cur],im=w.querySelector('img');img.src=im.src;img.alt=im.alt;cap.textContent=w.querySelector('.cap b').textContent+' · '+w.querySelector('.cap i').textContent;img.style.animation='none';img.offsetWidth;img.style.animation='';}
+  const vid=document.getElementById('lbVid');
+  function show(i){cur=(i+works.length)%works.length;const w=works[cur],im=w.querySelector('img');
+    cap.textContent=w.querySelector('.cap b').textContent+' · '+w.querySelector('.cap i').textContent;
+    if(w.dataset.video){img.hidden=true;img.removeAttribute('src');vid.hidden=false;vid.setAttribute('aria-label',im.alt);if(vid.getAttribute('src')!==w.dataset.video)vid.src=w.dataset.video;vid.play().catch(()=>{});}
+    else{vid.pause();vid.hidden=true;img.hidden=false;img.src=w.dataset.full||im.src;img.alt=im.alt;img.style.animation='none';img.offsetWidth;img.style.animation='';}}
   function open(i){last=document.activeElement;show(i);lb.hidden=false;bg.forEach(el=>el.inert=true);document.documentElement.style.overflow='hidden';document.getElementById('lbX').focus();}
-  function close(){lb.hidden=true;bg.forEach(el=>el.inert=false);document.documentElement.style.overflow='';if(last)last.focus();}
+  function close(){vid.pause();lb.hidden=true;bg.forEach(el=>el.inert=false);document.documentElement.style.overflow='';if(last)last.focus();}
+  // "Alle Arbeiten zeigen"
+  const gal=document.getElementById('gallery'),mb=document.getElementById('moreBtn');
+  mb.addEventListener('click',()=>{gal.classList.add('all');mb.setAttribute('aria-expanded','true');const f=gal.querySelector('.work.more');if(f)f.focus({preventScroll:true});});
+  // Video-Kachel: stumm abspielen, nur wenn sichtbar (nicht bei "Bewegung reduzieren")
+  const gv=gal.querySelector('.work.video video');
+  if(gv&&!matchMedia('(prefers-reduced-motion:reduce)').matches&&'IntersectionObserver'in window){
+    new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){gv.preload='auto';gv.play().catch(()=>{});}else gv.pause();}),{threshold:.35}).observe(gv);
+  }
   works.forEach((w,i)=>w.addEventListener('click',()=>open(i)));
   document.getElementById('lbX').addEventListener('click',close);
   document.getElementById('lbP').addEventListener('click',()=>show(cur-1));
