@@ -31,20 +31,21 @@
     {
       "@type": "TattooParlor",
       "@id": "https://tattoohope.de/#studio",
-      "name": "Tattoo Hope",
-      "alternateName": "Tattoo Hope on the Road",
+      "name": "Tattoo Hope on the Road",
+      "alternateName": "Tattoo Hope",
       "url": "https://tattoohope.de/",
       "logo": "https://tattoohope.de/img/logo_1080.webp",
       "image": ["https://tattoohope.de/img/tattoomobil.jpg", "https://tattoohope.de/img/artist.jpg"],
       "description": "Mobiles Tattoo-Studio im umgebauten Wohnmobil mit Basis in Wuppertal. Tätowierer Ümit Babayigit arbeitet seit 2013 in Black & Grey, Realistik, Portraits, Coverups, Fine Line und Floral.",
       "telephone": "+49 178 5776262",
       "foundingDate": "2013",
-      "address": {"@type": "PostalAddress", "streetAddress": "Buchenstr. 12", "postalCode": "42283", "addressLocality": "Wuppertal", "addressRegion": "NRW", "addressCountry": "DE"},
+      "hasMap": "https://www.google.com/maps?cid=10850807550342730653",
+      "address": {"@type": "PostalAddress", "streetAddress": "Buchenstraße 12", "postalCode": "42283", "addressLocality": "Wuppertal", "addressRegion": "NRW", "addressCountry": "DE"},
       "areaServed": [{"@type": "City", "name": "Wuppertal"}, {"@type": "Country", "name": "Deutschland"}],
       "founder": {"@id": "https://tattoohope.de/#uemit"},
       "knowsAbout": ["Black & Grey Tattoo", "Realistik-Tattoo", "Portrait-Tattoo", "Coverup-Tattoo", "Fine Line Tattoo", "Floral Tattoo", "Custom Tattoo Design"],
       "contactPoint": {"@type": "ContactPoint", "contactType": "Terminanfrage", "telephone": "+49 178 5776262", "url": "https://wa.me/491785776262", "availableLanguage": ["de", "tr"]},
-      "sameAs": ["https://www.instagram.com/tattoohope/", "https://www.tiktok.com/@tattoohope"]
+      "sameAs": ["https://www.instagram.com/tattoohope/", "https://www.tiktok.com/@tattoohope", "https://www.google.com/maps?cid=10850807550342730653"]
     },
     {
       "@type": "Person",
@@ -220,6 +221,9 @@ section{padding-block:88px}
 .links a{display:flex;justify-content:space-between;align-items:center;gap:12px;text-decoration:none;border-bottom:1px solid var(--line);padding:14px 0;font:500 1.05rem/1.2 var(--f-body)}
 .links a small{font:400 .72rem/1 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
 .links a:hover{color:var(--gold-hi)}
+.review-hint{margin-top:18px;font-size:.92rem;color:var(--ash)}
+.review-hint a{color:var(--gold);text-underline-offset:3px}
+.review-hint a:hover{color:var(--gold-hi)}
 @media (max-width:760px){.contact .box{grid-template-columns:1fr}}
 
 .legal{border-top:1px solid var(--line);padding-block:64px;background:var(--soot)}
@@ -1049,12 +1053,13 @@ footer a{display:inline-block;padding:12px 4px}
             <a class="btn solid" href="https://wa.me/491785776262" target="_blank" rel="noopener">WhatsApp schreiben</a>
             <a class="btn ghost" href="https://www.instagram.com/tattoohope/" target="_blank" rel="noopener">Instagram-Nachricht</a>
           </div>
+          <p class="review-hint">Schon bei Ümit gewesen? <a href="https://www.google.com/maps?cid=10850807550342730653" target="_blank" rel="noopener">Bewerte Tattoo Hope auf Google</a> – das hilft neuen Kunden, ihn zu finden. Danke!</p>
         </div>
         <div class="links">
           <a href="https://wa.me/491785776262" target="_blank" rel="noopener"><span>WhatsApp · 0178 5776262</span><small>Termin</small></a>
           <a href="https://www.instagram.com/tattoohope/" target="_blank" rel="noopener"><span>@tattoohope · 14.600+ Follower</span><small>Instagram</small></a>
           <a href="https://www.tiktok.com/@tattoohope" target="_blank" rel="noopener"><span>@tattoohope · 26.800 Follower</span><small>TikTok</small></a>
-          <a href="https://www.google.com/maps/search/Tattoo+Hope+Wuppertal" target="_blank" rel="noopener"><span>Tattoo Hope Wuppertal</span><small>Google Maps</small></a>
+          <a href="https://www.google.com/maps?cid=10850807550342730653" target="_blank" rel="noopener"><span>Tattoo Hope on the Road · Wuppertal</span><small>Google Maps &amp; Bewertungen</small></a>
         </div>
       </div>
     </div>
@@ -1066,7 +1071,7 @@ footer a{display:inline-block;padding:12px 4px}
       <div class="legal-grid">
         <div>
           <h3>Angaben gemäß § 5 DDG</h3>
-          <p>Ümit Babayigit<br>Tattoo Hope<br>Buchenstr. 12<br>42283 Wuppertal<br>Deutschland</p>
+          <p>Ümit Babayigit<br>Tattoo Hope on the Road<br>Buchenstr. 12<br>42283 Wuppertal<br>Deutschland</p>
           <h3>Kontakt</h3>
           <p>Telefon: <span class="sel">0178 5776262</span><br>E-Mail: <span class="sel">tatthope@gmail.com</span></p>
           <h3>Umsatzsteuer</h3>
